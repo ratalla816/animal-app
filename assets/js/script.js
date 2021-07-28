@@ -34,7 +34,7 @@ function apiWikiTest() {
         page = data.query.pages[Object.keys(data.query.pages)[0]]
 
         //Setting Page Extract To HTML Element
-        $("#data").html(page.extract);
+        $("#wiki-test").html(page.extract);
 
         //Logging the raw data response
         console.log("Wikipedia Query Response", data);
@@ -43,4 +43,22 @@ function apiWikiTest() {
     })
 }
 
+function apiGiphyTest() {
+    //API KEY: wrXSrUy02o5zN56E5cFhtNzijtmeWcKe
+    fetch("http://api.giphy.com/v1/gifs/search?q=zebra&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1")
+    .then((response) => response.json())
+    .then(function(data){
+        
+        html = '<div style="width:100%;height:0;padding-bottom:56%;position:relative;">';
+        html += '<iframe src="'+data.data[0].embed_url+'" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>';
+        html += '</div>';
+
+        $("#giphy-test").html(html);
+
+        //Logging the raw data response
+        console.log("Giphy Query Response", data);
+    })
+}
+
 apiWikiTest();
+apiGiphyTest();
