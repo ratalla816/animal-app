@@ -1,15 +1,16 @@
-* Project title:
-* Description: 
-option 1 - choose an animal, get articles and pics related to the animals from NatGeo and Giphy
-
-option 2 - 
+* Project title: Animal App
+* Description: - choose an animal, get articles and pics related to the animals from NatGeo and Giphy
 
 * Repository Configured: Yes
 
-* User story:
+* User story: I want to find articles and pictures pertaining to my favorite animals. 
+WHEN I visit the app I am presented with a drop down list of animals to choose from.
+THEN I pick an animal and am presented with gifs and a NatGeo article pertaining to my chosen animal. 
+THEN I am able to save the gif and article to view later and I may also choose a different animal. 
+
 
 * Wireframe or sketch of the design
 
-* API's identified
+* API's identified: pending
 
-* Issues created and assigned
+* Issues created and assigned: Yes
