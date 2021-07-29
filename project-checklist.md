@@ -9,7 +9,7 @@ THEN I pick an animal and am presented with gifs and a Wiki article pertaining t
 THEN I am able to save the gif and article to view later and I may also choose a different animal. 
 
 
-* Wireframe or sketch of the design: Added to .assets/images
+* Wireframe or sketch of the design: Added to ./assets/images
 
 * API's identified:
 
