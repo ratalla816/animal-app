@@ -9,8 +9,14 @@ THEN I pick an animal and am presented with gifs and a NatGeo article pertaining
 THEN I am able to save the gif and article to view later and I may also choose a different animal. 
 
 
-* Wireframe or sketch of the design
+* Wireframe or sketch of the design: Added to .assets/images
 
-* API's identified: pending
+* API's identified:
+
+Wiki "http://en.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Zebra&format=json"
+ 
+ Giphy "http://api.giphy.com/v1/gifs/search?q=zebra&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1"
+
+
 
 * Issues created and assigned: Yes
