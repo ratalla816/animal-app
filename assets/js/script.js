@@ -1,24 +1,39 @@
-// global variable
-var appId = "faa63307397f9a8437455fc4cacc3cd2";
-// var pleaseNoCors = (event) => {
-// let  = "api.openweathermap.org/data/2.5/onecall?lat=40.43&lon=74.39" + "&appId=" + appId;
-// };
-fetch("https://api.openweathermap.org/data/2.5/onecall?lat=40.43&lon=74.39" + "&appId=" + appId)
-.then ((response) => response.json())
-.then ((data) => console.log(data))
+// change only works with input,textarea, & select elements
 
-//Jquery starts here
+// init page
+$('.startBtn').on('click', function() {
+    // starts app and redirects to classification page
+   // $(this).hide(); should hide main page
+})
 
-$(".animalType").click(function() {
-    //if mammals select then show mammals option
-    //if fish select then show fish option
-    //if insects select then show insects option
-    //if birds select then show birds option
-    //if reptiles select then show reptiles option
+$('.animalType').on('click',function() {
+    alert('first button was clicked');
+    // call function to display animals of classification clicked by user
+    // redirects to animal selection page
+
+    // if mammals select then show mammals option
+    // if fish select then show fish option
+    // if insects select then show insects option
+    // if birds select then show birds option
+    // if reptiles select then show reptiles option
 });
 
-$(".animalSelection").click(function() {
-    //show information base on which actuall animal is clicked
-    //interacts with api
-    //use logic to fire up modal
+$('.animalSelection').on('click',function() {
+    alert('second button was clicked');
+    // call function for api here to display information about specific animal
+    // redirects to modal page
+
+    // show information base on which actuall animal is clicked
+    // interacts with api
+    // use logic to fire up modal
 });
+
+// REPLACE CLASS 
+$('.closeBtn').on('click', function() {
+    // closes page after user done with specific animal 
+})
+
+// REPLACE CLASS 
+$('.completeBtn').on('click', function() {
+    // allows user to mark THIS animal as complete
+})
