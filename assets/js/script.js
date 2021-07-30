@@ -60,5 +60,26 @@ function apiGiphyTest() {
     })
 }
 
+function apiPixabayTest() {
+    var apiKey = '22691826-3e6bf0771812c9d2424ab24b4';
+    var perPage = 200;
+    fetch('https://pixabay.com/api/?key='+ apiKey +'&image_type=photo&order=popular&per_page=' + perPage + '&q=zebra')
+    .then((response) => response.json())
+    .then(function(data){
+        // var random = Math.floor(Math.random() * data.hits.length);
+        // var image = data.hits[random].pageURL;
+
+        //Get First Image From Result
+        var image = data.hits[0].largeImageURL;
+        var imageHTML = '<img src="' + image + '" alt="" height="100"/>';
+
+        $("#pixabay-test").html(imageHTML);
+
+        console.log("Pixabay Query Response", data);
+    });
+
+}
+
 apiWikiTest();
 apiGiphyTest();
+apiPixabayTest();
