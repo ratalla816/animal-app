@@ -2,6 +2,18 @@ body {
     font-family: ui-sans-serif;
 }
 
+/* $box-color {
+
+} */
+
+#startButton {
+    display: block;
+    flex-direction: row;
+    justify-content: center/space-around;
+    text-align: center;
+	font-weight: bold;
+	text-shadow: 0px 1px 1px #A4A7A5;
+}
 /* Button classes */
 #animalType {
     display: block;
