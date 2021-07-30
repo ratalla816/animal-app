@@ -1,4 +1,5 @@
 // change only works with input,textarea, & select elements
+// some edit
 
 // init page
 $('.startBtn').on('click', function() {
