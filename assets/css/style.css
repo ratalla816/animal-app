@@ -15,7 +15,7 @@ body {
 /* Button classes */
 .animalType {
     display: block;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center/space-around;
     text-align: center;
     font-weight: bold;
