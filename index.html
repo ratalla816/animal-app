@@ -74,9 +74,7 @@
     <!-- NOTE: This is the anchor point for the modal DOM Element. The Layout structure you specify in your individual modal html file will be added via jQuery -->
     <div class="" id="modal"></div><!-- CSS: Set this to function like bootstrap's modal-->
     
-    <script src="./assets/js/script.js"></script>
-</body>
-</html>
+   
  
 <!-- ------------------------------------original code ----------------------------------------- -->
 
@@ -101,7 +99,7 @@
         </div>   
        
         
-        <div class="classification" id="modal"></div>
+        <div class="classification"></div>
 
             <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
                 <div class="column is-15-tablet is-20-desktop has-text-centered">
@@ -114,250 +112,95 @@
               </div>
             </div><!-- This is the content from your original index.html -->
             
+            <!-- <div class="selectionWrapper">
+              <button class="selectionItem" data-type="" data-name="">
+                  <div class="selectionTitle">
+                      Lorem Ipsum
+                  </div>
+                  <div class="selectionBG">
+                      <img src="#" alt="Some image" />
+                  </div>
+              </button>
+          </div> -->
             <div class="" id="content-head">          
         <div class="box is-15-tablet is-20-desktop has-text-centered mt-6">
         <div class="is-primary">
         <ul>
-            <li><button class="mammal is-size-1">Mammals</button></li>
-            <li><button class="fish is-size-1">Fish</button></li>
-            <li><button class="birds is-size-1">Birds</button></li>
-            <li><button class="reptiles is-size-1">Reptiles</button></li>
-            <li><button class="insects is-size-1">Insects</button></li>
-        </ul>
-    </div>
-    
-    <div class="Mammals" id="modal"></div>
 
-    <div class="column is-15-tablet is-20-desktop has-text-centered mt-6>
-        <div class="column="column-is-15-tablet is-20-desktop has-text-centered">
-          <p= has-text-danger>
-            <strong class="is-size-1 has-text-danger">Wow! Look at all the different types of Mammals!<strong>
-            </p>
-          <p= has-text-danger>
-            <strong class="is-size-1 has-text-danger">Which type do you want to learn about?<strong>
-          </p>
-        </div>
-      </div>
+            <div class="selectionWrapper">
+            <button class="selectionItem" data-type="klass" data-name="mammals">
+                <div class="selectionTitle">
+                    Mammals
+                </div>
+                <div class="selectionBG">
+                    <img src="./assets/images/mammal.jpg" alt="Red Fox, Wildlife in Winter Photo by Ray Hennessy on Unsplash" />
+                </div>
+            </button>
+        </div> 
 
-  <div class="" id="content-body">
+        <div class="selectionWrapper">
+          <button class="selectionItem" data-type="klass" data-name="fish">
+              <div class="selectionTitle">
+                  Fish
+              </div>
+              <div class="selectionBG">
+                  <img src="./assets/images/fish.jpg" alt="school of striped fish, Photo by Francesco Ungaro on Unsplash" />
+              </div>
+          </button>
+      </div> 
 
-  <div class="columns is-centered is-15-tablet is-20-desktop has-text-centered mt-6">
-  <div class="is-primary">
-  <ul>
-      <li><button class="animalType is-size-1" data-animal-name="whale">
-         <div>Whale</div>
-         <div><img src="./assets/images/whale.jpg" alt="Whale Photo by Silvana Palacios from Pexels"></div>
-       </button></li>
+      <div class="selectionWrapper">
+        <button class="selectionItem" data-type="klass" data-name="birds">
+            <div class="selectionTitle">
+                Birds
+            </div>
+            <div class="selectionBG">
+                <img src="./assets/images/birds.jpg" alt="flock of parrots, Photo by Gareth Davies on Unsplash" />
+            </div>
+        </button>
+    </div> 
 
-       <li><button class="animalType is-size-1" data-animal-name="zebra">
-          <div>zebra</div>
-          <div><img src="./assets/images/zebra.jpg" alt="Zebra Photo by Magda Ehlers from Pexels"></div>
-       </button></li>
-       
-       <li><button class="animalType is-size-1" data-animal-name="polar-bear">
-          <div>Polar Bear</div>
-          <div><img src="./assets/images/polar-bear.jpg" alt="Polar Bear Photo by Magda Ehlers from Pexels"></div>
-       </button></li>
-       
-       <li><button class="animalType is-size-1" data-animal-name="platypus">
-          <div>Platypus</div>
-          <div><img src="./assets/images/platypus.jpg" alt="Platypus photo by Meg Jerrard from Unsplash"></div>
-       </button></li>
-       
-       <li><button class="animalType is-size-1" data-animal-name="wombat">
-          <div>Wombat</div>
-          <div><img src="./assets/images/wombat.jpg" alt="Wombat photo by Meg Jerrard from Unsplash"></div>
-       </button></li>
-    </ul>  
+    <div class="selectionWrapper">
+      <button class="selectionItem" data-type="klass" data-name="reptiles">
+          <div class="selectionTitle">
+              Reptiles
+          </div>
+          <div class="selectionBG">
+              <img src="./assets/images/reptiles.jpg" alt="Green crested lizard in Singapore, Photo by Mark Stoop on Unsplash" />
+          </div>
+      </button>
   </div> 
 
-
-    
-    <div class="Fish" id="modal"></div>
-    
-    <div class="column is-15-tablet is-20-desktop has-text-centered mt-6>
-        <div class="column="column-is-15-tablet is-20-desktop has-text-centered">
-          <p= has-text-danger>
-            <strong class="is-size-1 has-text-danger">Wow! Look at all the different types of fish!<strong>
-            </p>
-          <p= has-text-danger>
-            <strong class="is-size-1 has-text-danger">Which type do you want to learn about?<strong>
-          </p>
+  <div class="selectionWrapper">
+    <button class="selectionItem" data-type="klass" data-name="insects">
+        <div class="selectionTitle">
+            Insects
         </div>
-      </div>
-
-  
-    <div class="columns is-centered is-15-tablet is-20-desktop has-text-centered mt-6">
-    <div class="is-primary">
-    <ul>
-        <button class="animalType is-size-1" data-animal-name="pirhana">
-          <div>Pirhana</div>
-          <div><img src="./assets/images/piranha.jpg" alt="Pirhana image by Rethinktwice from Pixabay"></div>
-        </button>
-
-        <button class="animalType is-size-1" data-animal-name="whale-shark">
-          <div>Whale Shark</div>
-          <div><img src="./assets/images/whale-shark.jpg" alt="Whale Shark Photo by Leonardo Lamas from Pexels"></div>
-        </button>
-        <button class="animalType is-size-1" data-animal-name="jellyfish">
-          <div>Jellyfish</div>
-          <div><img src="./assets/images/jellyfish.jpg" alt="Jellyfish Photo by Oday Hazeem from Pexels"></div>
-        </button>
-        <button class="animalType is-size-1" data-animal-name="blobfish">
-          <div>Blobfish</div>
-          <div><img src="./assets/images/blobfish.jpg" alt="Blobfish by World Book, Kerryn Parkinson, NORFANZ/Caters News/ZUMA Press"></div>
-        </button>
-        <button class="animalType is-size-1" data-animal-name="angler-fish">
-          <div>Angler Fish</div>
-          <div><img src="./assets/images/angler-fish.jpg" alt="Angler Fish Photo by NOAA from Unsplash"></div>
-        </button>
-    </ul>  
-</div> 
-
-<div class="Birds" id="modal"></div>
-
-    <div class="column is-15-tablet is-20-desktop has-text-centered mt-6>
-        <div class="column="column-is-15-tablet is-20-desktop has-text-centered">
-          <p= has-text-danger>
-            <strong class="is-size-1 has-text-danger">Wow! Look at all the different types of birds!<strong>
-            </p>
-          <p= has-text-danger>
-            <strong class="is-size-1 has-text-danger">Which type do you want to learn about?<strong>
-          </p>
+        <div class="selectionBG">
+            <img src="./assets/images/insects.jpg" alt="a red moth on a leaf, The Ruby Tiger, Photo by Erik Karits on UnsplashSome image" />
         </div>
-      </div>
-
-  <div class="columns is-centered is-15-tablet is-20-desktop has-text-centered mt-6">
-  <div class="is-primary">
-  <ul>
-      <button class="animalType is-size-1" data-animal-name="hummingbird">
-        <div>Hummingbird</div>
-        <div><img src="./assets/images/hummingbird.jpg" alt="Hummingbird photo by Zdenek Machacek on Unsplash"></div>
-      </button>
-
-      <button class="animalType is-size-1" data-animal-name="golden-eagle">
-        <div>Golden Eagle</div>
-        <div><img src="./assets/images/golden-eagle.jpg" alt="Golden Eagle Photo by Mark van Jaarsveld on Unsplash"></div>
-      </button>
-      
-      <button class="animalType is-size-1" data-animal-name="toucan">
-        <div>Toucan</div>
-        <div><img src="./assets/images/toucan.jpg" alt="Toucan Photo by Carmel Arquelau on Unsplash"></div>
-      </button>
-     
-      <button class="animalType is-size-1" data-animal-name="flamingo">
-        <div>Flamingo</div>
-        <div><img src="./assets/images/flamingo.jpg" alt="Flamingo Photo by Lino Ogenio on Unsplash"></div>
-      </button>
-     
-      <button class="animalType is-size-1" data-animal-name="ostrich">
-        <div>Ostrich</div>
-        <div><img src="./assets/images/ostrich.jpg" alt="ostrich Photo by David Clode on Unsplash"></div>
-      </button>
-  </ul>  
-</div> 
-
-<div class="Reptiles" id="modal"></div>
-
-<div class="column is-15-tablet is-20-desktop has-text-centered mt-6>
-    <div class="column="column-is-15-tablet is-20-desktop has-text-centered">
-      <p= has-text-danger>
-        <strong class="is-size-1 has-text-danger">Wow! Look at all the different types of reptiles!<strong>
-        </p>
-      <p= has-text-danger>
-        <strong class="is-size-1 has-text-danger">Which type do you want to learn about?<strong>
-      </p>
-    </div>
-  </div>
-
-<div class="" id="content-body">   
-
-<div class="columns is-centered is-15-tablet is-20-desktop has-text-centered mt-6">
-<div class="is-primary">
-<ul>
-  <button class="animalType is-size-1" data-animal-name="komodo-dragon">
-    <div>Komodo Dragon</div>
-    <div><img src="./assets/images/komodo-dragon.jpg" alt="komodo dragon Photo by David Clode on Unsplash"></div>
-  </button>
-
-  <button class="animalType is-size-1" data-animal-name="king-cobra">
-    <div>King Cobra</div>
-    <div><img src="./assets/images/king-cobra.jpg" alt="king-cobra Photo by Godwin Angeline Benjo on Unsplash"></div>
-  </button>
-  
-  <button class="animalType is-size-1" data-animal-name="crocodile">
-    <div>Crocodile</div>
-    <div><img src="./assets/images/crocodile.jpg" alt="crocodile Photo by Karl Bewick on Unsplash"></div>
-  </button>
-  
-  <button class="animalType is-size-1" data-animal-name="gallopogos-tortoise">
-    <div>Gallopogos Tortoise</div>
-    <div><img src="./assets/images/galapogos-tortoise.jpg" alt="galapogos-tortoise Photo by Magdalena Kula Manchee on Unsplash"></div>
-  </button>
-  
-  <button class="animalType is-size-1" data-animal-name="Anaconda">
-    <div>Anaconda</div>
-    <div><img src="./assets/images/anaconda.jpg" alt="Anaconda Image by Denis Doukhan from Pixabay"></div>
-  </button>
-</ul>  
-</div> 
+     </button>
+ </div> 
 
 
-<div class="Insects" id="modal"></div>
+        
 
-<div class="" id="content"><!-- CSS: Set this to function like bootstrap's container-->
+  <div class="" id="modal"></div>
 
-    <div class="" id="content-head"><!-- CS: Set this to function like bootstrap's row-->
-      <!-- Note: The content-head is the wrapper that we can append heading/subheading content -->
-
-<div class="column is-15-tablet is-20-desktop has-text-centered mt-6>
-        <div class="column="column-is-15-tablet is-20-desktop has-text-centered">
-          <p= has-text-danger>
-            <strong class="is-size-1 has-text-danger">Wow! Look at all the different types of insects!<strong>
-            </p>
-          <p= has-text-danger>
-            <strong class="is-size-1 has-text-danger">Which type do you want to learn about?<strong>
-          </p>
-        </div>
-      </div>
-
-<div class="" id="content-body">   
-  
-  <div class="columns is-centered is-15-tablet is-20-desktop has-text-centered mt-6">
-  <div class="is-primary">
-  <ul>
-      <button class="animalType is-size-1" data-animal-name="ant">
-        <div>Ant</div>
-        <div><img src="./assets/images/ant.jpg" alt="Ant Photo by Alex Ribeiro on Unsplash"></div>
-      </button>
-      
-      <button class="animalType is-size-1" data-animal-name="stickbug">
-         <div>Stickbug</div>
-         <div><img src="./assets/images/stickbug.jpg" alt="Stickbug photo by National Wildlife Federation.org"></div>
-      </button>
-
-      <button class="animalType is-size-1" data-animal-name="firefly">
-         <div>firefly</div>
-         <div><img src="./assets/images/firefly.jpg" alt="Firefly Photo by Flash Dantz from Pexels"></div>
-      </button>
-
-      <button class="animalType is-size-1" data-animal-name="cockroach">
-          <div>Cockroach</div>
-          <div><img src="./assets/images/cockroach.jpg" alt="Cockroach Photo by Erik Karits from Pexels"></div>
-      </button>
-
-      <button class="animalType is-size-1" data-animal-name="praying-mantis">
-           <div>Praying Mantis</div>
-           <div><img src="./assets/images/praying-mantis.jpg" alt="Praying Mantis Photo by Frank Cone from Pexels"></div>
-      </button>
-    </ul>  
-  </div>       
-
-
-
-
+ 
+                  <div>
+                    article
+                  </div>
+                  <div>
+                    giphy
+                  </div>
+          </div>
 
 
 
     </div>
 </body>
+
+<script src="./assets/js/script.js"></script>
+</body>
+</html>
