@@ -226,13 +226,17 @@ animalInit();
 // some edit
 
 // init page
-$('.startBtn').on('click', function() {
-    // starts app and redirects to classification page
+ // starts app and redirects to classification page
    // $(this).hide(); should hide main page
-})
 
-$('.animalType').on('click',function() {
-    alert('first button was clicked');
+// $('.startBtn').on('click', function() {
+   
+// })
+
+//$('.animalType').on('click',function() {
+
+    //alert('first button was clicked');
+    
     // call function to display animals of classification clicked by user
     // redirects to animal selection page
 
@@ -241,24 +245,31 @@ $('.animalType').on('click',function() {
     // if insects select then show insects option
     // if birds select then show birds option
     // if reptiles select then show reptiles option
-});
+//});
 
-$('.animalSelection').on('click',function() {
-    alert('second button was clicked');
+//$('.animalSelection').on('click',function(event) {
+    //event.preventDefault();
+    //console.log(event); //check to see what the event outputs
+    //grab by data attribute 
+
+    //alert('second button was clicked');
+
     // call function for api here to display information about specific animal
     // redirects to modal page
 
     // show information base on which actuall animal is clicked
     // interacts with api
     // use logic to fire up modal
-});
+//});
 
 // REPLACE CLASS 
-$('.closeBtn').on('click', function() {
-    // closes page after user done with specific animal 
-})
+  // closes page after user done with specific animal 
+// $('.closeBtn').on('click', function() {
+  
+// })
 
 // REPLACE CLASS 
-$('.completeBtn').on('click', function() {
-    // allows user to mark THIS animal as complete
-})
+ // allows user to mark THIS animal as complete
+// $('.completeBtn').on('click', function() {
+   
+// })
