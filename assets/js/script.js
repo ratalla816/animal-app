@@ -165,6 +165,7 @@ async function getAnimalByAnimalName(animal_name) {
 */
 
 var createClassification = function () {
+    //hides first page content
     $('.title').hide(); //display-none using css and the add class to show and hide via jquery toogle
     $('.startButton').hide();
     $('<button/>', {
@@ -203,9 +204,7 @@ var createClassification = function () {
     }).appendTo('#content-head');
 }
 
-// init page
 $('.startButton').on('click', function() {
-    //hides first page content
     createClassification();
     /*
         - Remove Start Content
