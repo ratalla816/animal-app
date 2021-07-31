@@ -55,7 +55,7 @@ async function animalInit(){
     //Sample Animal Request
     var animalData = await getAnimalByAnimalName(animalObj[0].name);
 
-    //Adding to HTML
+    //Test Adding to HTML
     contentTest(animalData);
 
     //Log animalObj and sample animalData
@@ -136,7 +136,108 @@ async function getAnimalByAnimalName(animal_name) {
     return animalData;
 }
 
+// change only works with input,textarea, & select elements
+// some edit
 
+/*
+
+    * The HTML for a selection now looks like the below. When the ".selectionItem" gets clicked, 
+    * we need to get the data attributes and use them to display the correct selection.
+    
+    <div class="selectionWrapper">
+        <button class="selectionItem" data-type="" data-name="">
+            <div class="selectionTitle">
+                Lorem Ipsum
+            </div>
+            <div class="selectionBG">
+                <img src="#" alt="Some image" />
+            </div>
+        </button>
+    </div>
+
+    * data-type is either "klass" or "animal". 
+        o If the button is for a classification, data-type="klass". 
+        o If the button is for an animal, data-type="animal"
+    * data-name is either the name of the classification or the animal name
+
+*/
+
+// init page
+$('.startBtn').on('click', function() {
+
+    /*
+        - Remove Start Content
+        - Add Animal Classifiation HTML to DOM
+    */
+})
+
+/*
+    Ive consolidated the animalType and animalSelection class to selectionItem. We need to rewrite
+    an event handler to listen for clicks on ".selectionItem"
+    
+    After being clicked, we need to get the "data-type" and "data-name" attributes from the ".selectionItem"
+    DOM Element
+        If the data-type="klass",
+            Get animals with data-type="klass_name"
+            Update HTML with selection animal classification
+        If the data-type="animal"
+            Get animalData
+            Set animalData within Modal HTML
+            Trigger Modal
+*/
+
+$('.animalType').on('click',function() {
+    alert('first button was clicked');
+    // call function to display animals of classification clicked by user
+    // redirects to animal selection page
+
+    // if mammals select then show mammals option
+    // if fish select then show fish option
+    // if insects select then show insects option
+    // if birds select then show birds option
+    // if reptiles select then show reptiles option
+});
+
+$('.animalSelection').on('click',function() {
+    alert('second button was clicked');
+    // call function for api here to display information about specific animal
+    // redirects to modal page
+
+    // show information base on which actuall animal is clicked
+    // interacts with api
+    // use logic to fire up modal
+});
+
+// REPLACE CLASS 
+$('.closeBtn').on('click', function() {
+    /*
+        Hide Modal
+        Remove Modal Content from DOM
+        Display Current Animal Classifcation Menu
+    */
+})
+
+// REPLACE CLASS 
+$('.completeBtn').on('click', function() {
+
+    /*
+        Hide Modal
+        Set animalObject[animal].completed = "true"
+        Remove Modal Content from DOM
+        Display Current Animal Classification Menu
+    */
+    
+})
+
+/*
+    We need to create an event handler for when "#selectionBack" is clicked, we update the HTML with
+    the animal selection menu.
+
+    - Remove animal selection HTML from DOM
+    - Add animal classification HTML to DOM
+*/
+
+animalInit();
 
 /* 
 Basic Wikipedia API Notes
@@ -218,47 +319,3 @@ function apiPixabayTest() {
     });
 }
 
-animalInit();
-// apiWikiTest();
-// apiGiphyTest();
-// apiPixabayTest();
-// change only works with input,textarea, & select elements
-// some edit
-
-// init page
-$('.startBtn').on('click', function() {
-    // starts app and redirects to classification page
-   // $(this).hide(); should hide main page
-})
-
-$('.animalType').on('click',function() {
-    alert('first button was clicked');
-    // call function to display animals of classification clicked by user
-    // redirects to animal selection page
-
-    // if mammals select then show mammals option
-    // if fish select then show fish option
-    // if insects select then show insects option
-    // if birds select then show birds option
-    // if reptiles select then show reptiles option
-});
-
-$('.animalSelection').on('click',function() {
-    alert('second button was clicked');
-    // call function for api here to display information about specific animal
-    // redirects to modal page
-
-    // show information base on which actuall animal is clicked
-    // interacts with api
-    // use logic to fire up modal
-});
-
-// REPLACE CLASS 
-$('.closeBtn').on('click', function() {
-    // closes page after user done with specific animal 
-})
-
-// REPLACE CLASS 
-$('.completeBtn').on('click', function() {
-    // allows user to mark THIS animal as complete
-})

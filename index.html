@@ -1,32 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">    
-<title>Animal App</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-<link rel="stylesheet" href="./assets/css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Animal Explorer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
 
+<!-- 
+    NOTE: I updated the file with a basic HTML structure we need to follow to easily move content around with jQuery.
+
+    * If possible, when you test out the individual html files, update the layout structure 
+    to conform to the content > content-head, content-body format. Backend will use your html
+    as templates for adding and removing DOM elements.
+
+    * Since we arent going to be functionally using separate html files, update your current html 
+    to not use the <a> attribute and use IDs or Classes for jQuery to operate from.
+
+    * For Classification/Animal Selection buttons, use am html structure that looks similar to this.
+    You can use bulma or custom css classes to conform to your design. Backend just needs the elements/css class to 
+    layout like:
+
+        <div class="selectionWrapper">
+            <button class="selectionItem" data-type="" data-name="">
+                <div class="selectionTitle">
+                    Lorem Ipsum
+                </div>
+                <div class="selectionBG">
+                    <img src="#" alt="Some image" />
+                </div>
+            </button>
+        </div>
+
+        - data-type is either: "klass" or "animal". 
+                o If the button is for a classification, set it to "klass".
+                o If the button is for a animal, set it to "animal"
+        - data-name is either an animal or classification name. see animalObj for complete list of names.
+    
+    * When you test the modal content, be sure you format it to fit within the new modal wrapper I added to the layout.
+
+    * We need to work a back button into the animal selection menu so that users can navigate all choices. If you give 
+    the button element an id of "selectionBack", backend will create an event listener for it.
+-->
 
 <body>
-    <!-- <h1 class="question">Which animal to you want to learn about?</h1> -->
-    <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
-        <div class="column is-15-tablet is-20-desktop has-text-centered">
-        <p= has-text-danger>
-            <strong class="is-size-1 has-text-danger">Lets see some animals!<strong>
-        </p>
+    <div class="" id="content"><!-- CSS: Set this to function like bootstrap's container-->
+
+        <div class="" id="content-head"><!-- CS: Set this to function like bootstrap's row-->
+            <!-- Note: The content-head is the wrapper that we can append heading/subheading content -->
+
+            <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
+                <div class="column is-15-tablet is-20-desktop has-text-centered">
+                <p= has-text-danger>
+                    <strong class="is-size-1 has-text-danger">Lets see some animals!<strong>
+                </p>
+                </div>
+            </div><!-- This is the content from your original index.html -->
         </div>
+
+        <div class="" id="content-body"><!-- TO DO: Set this to function like bootstrap's row-->
+            <!-- Note: The content-body is the wrapper that we can append the classification/animal-selection lists/buttons -->
+
+            <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
+                <a href="classifications.html">
+                <button class="startButton is-size-1">Start</button>
+                </a>
+            </div><!-- This is the content from your original index.html -->
+        </div>   
+
     </div>
-    
-    <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
-        <a href="classifications.html">
-        <button class="startButton is-size-1">Start</button>
-        </a>
-    </div>
+    <!-- NOTE: This is the anchor point for the modal DOM Element. The Layout structure you specify in your individual modal html file will be added via jQuery -->
+    <div class="" id="modal"></div><!-- CSS: Set this to function like bootstrap's modal-->
     
     <script src="./assets/js/script.js"></script>
-    </body>
-    </html>
-    <style>
+</body>
+</html>
     
-    </style>
