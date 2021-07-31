@@ -35,6 +35,8 @@ var animalDefaultObj = [
     {id: 24, klass: 'reptile', name: 'anaconda', completed: false },
 ];
 
+console.log(animalDefaultObj);
+
 //Get animal object from localStorage
 function getAnimals() {
     var animalObj = JSON.parse(localStorage.getItem('animals')) || animalDefaultObj;
@@ -162,14 +164,64 @@ async function getAnimalByAnimalName(animal_name) {
 
 */
 
-// init page
-$('.startBtn').on('click', function() {
+var createClassification = function () {
+    $('.title').hide(); //display-none using css and the add class to show and hide via jquery toogle
+    $('.startButton').hide();
+    $('<button/>', {
+        id: 'some-id',
+        dataType: 'klass',
+        text: 'Mammals',
+        "class": 'some-class',
+    }).appendTo('#content-head');
+    
+    $('<button/>', {
+        id: 'some-id',
+        dataType: 'klass',
+        text: 'Fish',
+        "class": 'some-class',
+    }).appendTo('#content-head');
 
+    $('<button/>', {
+        id: 'some-id',
+        dataType: 'klass',
+        text: 'Birds',
+        "class": 'some-class',
+    }).appendTo('#content-head');
+
+    $('<button/>', {
+        id: 'some-id',
+        dataType: 'klass',
+        text: 'Reptiles',
+        "class": 'klass',
+    }).appendTo('#content-head');
+
+    $('<button/>', {
+        id: 'some-id',
+        dataType: 'klass',
+        text: 'Insects',
+        "class": 'some-class',
+    }).appendTo('#content-head');
+}
+
+// init page
+$('.startButton').on('click', function() {
+    //hides first page content
+    createClassification();
     /*
         - Remove Start Content
         - Add Animal Classifiation HTML to DOM
     */
 })
+
+var createAnimal = function(){
+    $('.animal').hide();
+    $('<button/>', {
+        id: 'some-id',
+        dataType: 'aimal',
+        text: 'Mammals',
+        "class": 'some-class',
+    }).appendTo('#content-head');
+};
 
 /*
     Ive consolidated the animalType and animalSelection class to selectionItem. We need to rewrite
@@ -186,20 +238,12 @@ $('.startBtn').on('click', function() {
             Trigger Modal
 */
 
-$('.animalType').on('click',function() {
-    alert('first button was clicked');
-    // call function to display animals of classification clicked by user
-    // redirects to animal selection page
-
-    // if mammals select then show mammals option
-    // if fish select then show fish option
-    // if insects select then show insects option
-    // if birds select then show birds option
-    // if reptiles select then show reptiles option
+$('.selectionItem').on('click',function() {
+   
 });
 
 $('.animalSelection').on('click',function() {
-    alert('second button was clicked');
+    //alert('second button was clicked');
     // call function for api here to display information about specific animal
     // redirects to modal page
 
@@ -326,51 +370,4 @@ animalInit();
 // change only works with input,textarea, & select elements
 // some edit
 
-// init page
- // starts app and redirects to classification page
-   // $(this).hide(); should hide main page
 
-// $('.startBtn').on('click', function() {
-   
-// })
-
-//$('.animalType').on('click',function() {
-
-    //alert('first button was clicked');
-    
-    // call function to display animals of classification clicked by user
-    // redirects to animal selection page
-
-    // if mammals select then show mammals option
-    // if fish select then show fish option
-    // if insects select then show insects option
-    // if birds select then show birds option
-    // if reptiles select then show reptiles option
-//});
-
-//$('.animalSelection').on('click',function(event) {
-    //event.preventDefault();
-    //console.log(event); //check to see what the event outputs
-    //grab by data attribute 
-
-    //alert('second button was clicked');
-
-    // call function for api here to display information about specific animal
-    // redirects to modal page
-
-    // show information base on which actuall animal is clicked
-    // interacts with api
-    // use logic to fire up modal
-//});
-
-// REPLACE CLASS 
-  // closes page after user done with specific animal 
-// $('.closeBtn').on('click', function() {
-  
-// })
-
-// REPLACE CLASS 
- // allows user to mark THIS animal as complete
-// $('.completeBtn').on('click', function() {
-   
-// })
