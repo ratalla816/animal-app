@@ -35,6 +35,8 @@ var animalDefaultObj = [
     {id: 24, klass: 'reptile', name: 'anaconda', completed: false },
 ];
 
+console.log(animalDefaultObj);
+
 //Get animal object from localStorage
 function getAnimals() {
     var animalObj = JSON.parse(localStorage.getItem('animals')) || animalDefaultObj;
@@ -162,14 +164,68 @@ async function getAnimalByAnimalName(animal_name) {
 
 */
 
-// init page
-$('.startBtn').on('click', function() {
+var createClassification = function () {
+    //hides first page content
+    $('.title').hide(); //display-none using css and the add class to show and hide via jquery toogle
+    $('.startButton').hide();
+    $('<button/>', {
+        id: 'some-id',
+        dataType: 'klass',
+        dataName: 'mammals',
+        text: 'Mammals',
+        "class": 'some-class',
+    }).appendTo('#content-head');
+    
+    $('<button/>', {
+        id: 'some-id',
+        dataType: 'klass',
+        dataName: 'fish' ,
+        text: 'Fish',
+        "class": 'some-class',
+    }).appendTo('#content-head');
 
+    $('<button/>', {
+        id: 'some-id',
+        dataType: 'klass',
+        dataName: 'insects' ,
+        text: 'Birds',
+        "class": 'some-class',
+    }).appendTo('#content-head');
+
+    $('<button/>', {
+        id: 'some-id',
+        dataType: 'klass',
+        dataName: 'birds' ,
+        text: 'Reptiles',
+        "class": 'klass',
+    }).appendTo('#content-head');
+
+    $('<button/>', {
+        id: 'some-id',
+        dataType: 'klass',
+        dataName: 'reptiles' ,
+        text: 'Insects',
+        "class": 'some-class',
+    }).appendTo('#content-head');
+}
+
+$('.startButton').on('click', function() {
+    createClassification();
     /*
         - Remove Start Content
         - Add Animal Classifiation HTML to DOM
     */
 })
+
+var createAnimal = function(){
+    $('.animal').hide();
+    $('<button/>', {
+        id: 'some-id',
+        dataType: 'animal',
+        text: 'ANIMAL NAME HERE',
+        "class": 'some-class',
+    }).appendTo('#content-head');
+};
 
 /*
     Ive consolidated the animalType and animalSelection class to selectionItem. We need to rewrite
@@ -186,20 +242,13 @@ $('.startBtn').on('click', function() {
             Trigger Modal
 */
 
-$('.animalType').on('click',function() {
-    alert('first button was clicked');
-    // call function to display animals of classification clicked by user
-    // redirects to animal selection page
-
-    // if mammals select then show mammals option
-    // if fish select then show fish option
-    // if insects select then show insects option
-    // if birds select then show birds option
-    // if reptiles select then show reptiles option
+$('.selectionItem').on('click',function() {
+    alert('button was clicked');
+   $('button').atr(attribute)
 });
 
 $('.animalSelection').on('click',function() {
-    alert('second button was clicked');
+    //alert('second button was clicked');
     // call function for api here to display information about specific animal
     // redirects to modal page
 
@@ -318,4 +367,12 @@ function apiPixabayTest() {
         console.log("Pixabay Query Response", data);
     });
 }
+
+animalInit();
+// apiWikiTest();
+// apiGiphyTest();
+// apiPixabayTest();
+// change only works with input,textarea, & select elements
+// some edit
+
 

@@ -31,6 +31,10 @@ background-color: chocolate;
 }
 
 /* Button classes */
+.selectionWrapper{
+    display: none;
+}
+
 .animalType {
     display: block;
     flex-direction: column;
