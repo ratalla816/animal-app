@@ -10,24 +10,25 @@
 </head>
 
 <body>
+<!------------------------------- START PAGE -------------------------------->
   <div class="startPage" id="content"></div>
 
-  <div class="column is-15-tablet is-20-desktop has-text-centered mt-6" id="content-head">
+  <div class="column is-15-tablet is-20-desktop has-text-centered mt-6 has-background-danger" id="content-head">
     <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
       <div class="column is-15-tablet is-20-desktop has-text-centered">
         <p= has-text-danger>
-          <strong class="is-size-1 has-text-danger">Lets see some animals!<strong>
+          <strong class="is-size-1 has-text-light has-background-danger">Lets see some animals!<strong>
               </p>
       </div>
     </div>
   </div>
   <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
-    <button class="startButton is-size-1">Start</button>
+    <button class="startButton is-size-1 has-background-info has-text-light">Start</button>
     </a>
   </div>
   </div>
 
-
+<!------------------------------- PAGE 2: SELECT ANIMAL CLASSIFICATION -------------------------------->
   <div class="classification"></div>
 
   <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
@@ -40,7 +41,7 @@
                 You will love them ALL!<strong>
                   </p>
     </div>
-  </div><!-- This is the content from your original index.html -->
+  </div>
 
   <div class="" id="content-head">
     <div class="box is-15-tablet is-20-desktop has-text-centered mt-6">
@@ -106,79 +107,114 @@
             </button>
           </div>
 
+<!------------------------------- PAGE 3: SELECT ANIMAL TYPE -------------------------------->
 
+                                   <!-- DOM MANIPULATION -->
+
+<!----------PAGE 4: DISPLAY ARTICLE (top), SAVED SEARCHES (lower left col), THREE IMAGE CARDS (lower right cols)-------------->
 
           <div class="modal" id="modal">
             <div class="modal-background"></div>
             <div class="modal-content">
-
-              <!-- saved searches -->
-              <div class="modal">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                </div>
-                <button class="modal-close is-large" aria-label="close"></button>
-              </div>
-              <br>
-
-              <!-- article -->
-              <div class="card">
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-left">
-                      <div class="media-content">
+             <div class="column">
+             <!-- article section-->
+                <p class="bd-notification is-danger">Creature Feature</p>
+                <div class="columns is-mobile">
+                  <div class="column is-half">
+                    <div class="card">
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-left">
+                            <div class="media-content">
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- saved searches -->
+                    <p class="bd-notification is-danger">You have learned about:</p>
+                    <div class="modal">
+                      <div class="modal-background"></div>
+                      <div class="modal-content">
                       </div>
                     </div>
-                    <!-- in case we want text here (optional) -->
-                    <div class="content">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus nec iaculis mauris.
+                  </div>
+                  <!-- giphy x3 -->
+                  <div class="column">
+                    <p class="bd-notification is-info">Here is</p>
+                    <div class="modal">
+                      <div class="modal-background"></div>
+                      <div class="modal-content">
+                        <p class="image is-4by3">
+                          <img src="#" alt="">
+                        </p>
+                     </div>
+                  <div class="column">
+                    <p class="bd-notification is-info">what I</p>
+                    <div class="modal">
+                      <div class="modal-background"></div>
+                      <div class="modal-content">
+                        <p class="image is-4by3">
+                          <img src="#" alt="">
+                        </p>
+                      </div>
+                    </div>
+                  </div>  
+                  <div class="column">
+                    <p class="bd-notification is-info">look like!</p>
+                    <div class="modal">
+                      <div class="modal-background"></div>
+                      <div class="modal-content">
+                        <p class="image is-4by3">
+                          <img src="#" alt="">
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <br>
-                <!-- Giphy x 3 -->
-                <section class="gifs">
-                  <div class="flex-row">
-                    <strong class="section-title primary-border is-4 has-text-centered">
-                      They look like these!<strong>
+  <!------------------------------- "CLOSE" BUTTON STARTS NEW SEARCH -------------------------------->
+                  <button class="modal-close is-large has-text-centered mt-6" aria-label="close">
+                    Learn about more animals!</button>
                   </div>
-                  <div class="modal">
-                    <div class="modal-background"></div>
-                    <div class="modal-content">
-                      <p class="image is-4by3">
-                        <img src="#" alt="">
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="modal">
-                    <div class="modal-background"></div>
-                    <div class="modal-content">
-                      <p class="image is-4by3">
-                        <img src="#" alt="">
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="modal">
-                    <div class="modal-background"></div>
-                    <div class="modal-content">
-                      <p class="image is-4by3">
-                        <img src="#" alt="">
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <button class="modal-close is-large" aria-label="close"></button>
-                <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
-                  <button class="startButton is-size-1">I want to see another animal!</button>
-                </section>  
+               </div>
               </div>
+             </div>
             </div>
+           </div>
 
-
-            <script src="./assets/js/script.js"></script>
+ <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
+
+<!-- we COULD use a navbar to access saved searches -->
+  <!-- <nav class="navbar">
+    <div class="container">
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Home
+          </a>
+          <a class="navbar-item">
+            Documentation
+          </a>
+        </div>
+  
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-dark">Github</a>
+              <a class="button is-link">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <section class="hero is-link is-fullheight-with-navbar">
+    <div class="hero-body">
+      <p class="title">
+        Fullheight hero with navbar
+      </p>
+    </div>
+  </section> -->
