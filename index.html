@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<!------------------------------- START PAGE -------------------------------->
+  <!------------------------------- START PAGE -------------------------------->
   <div class="startPage" id="content"></div>
 
   <div class="column is-15-tablet is-20-desktop has-text-centered mt-6 has-background-danger" id="content-head">
@@ -28,7 +28,7 @@
   </div>
   </div>
 
-<!------------------------------- PAGE 2: SELECT ANIMAL CLASSIFICATION -------------------------------->
+  <!------------------------------- PAGE 2: SELECT ANIMAL CLASSIFICATION -------------------------------->
   <div class="classification"></div>
 
   <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
@@ -44,12 +44,14 @@
   </div>
 
   <div class="" id="content-head">
-    <div class="box is-15-tablet is-20-desktop has-text-centered mt-6">
+    <div class="box is-5-tablet is-10-desktop has-text-centered mt-6">
       <div class="is-primary">
         <ul>
-          <div class="animal-classifications" 
-            <div class="selectionWrapper">
-            <button class="selectionItem" data-type="klass" data-name="mammals">
+          <!-- <div class="animal-classifications">  -->
+            <!-- <div class="columns"> -->
+              <!-- <div class="column"> -->
+          <div class="selectionWrapper">
+            <button class="selectionItem selectButton" data-type="klass" data-name="mammals">
               <div class="selectionTitle">
                 <strong class="is-size-1 has-text-info">Mammals<strong>
               </div>
@@ -59,140 +61,138 @@
               </div>
             </button>
           </div>
-         </div>
-         <div class="animal-classifications">
-           <div class="selectionWrapper">
-            <button class="selectionItem" data-type="klass" data-name="fish">
-              <div class="selectionTitle">
-                <strong class="is-size-1 has-text-info">Fish<strong>
-              </div>
-              <div class="selectionBG">
-                <img src="./assets/images/fish.jpg"
-                  alt="school of striped fish, Photo by Francesco Ungaro on Unsplash" />
-              </div>
-            </button>
-           </div>
-         </div>
-          <div class="animal-classifications">
-          <div class="selectionWrapper">
-            <button class="selectionItem" data-type="klass" data-name="birds">
-              <div class="selectionTitle">
-                <strong class="is-size-1 has-text-info">Birds<strong>
-              </div>
-              <div class="selectionBG">
-                <img src="./assets/images/birds.jpg" alt="flock of parrots, Photo by Gareth Davies on Unsplash" />
-              </div>
-            </button>
-          </div>
-         </div>
-          <div class="animal-classifications">
-           <div class="selectionWrapper">
-            <button class="selectionItem" data-type="klass" data-name="reptiles">
-              <div class="selectionTitle">
-                <strong class="is-size-1 has-text-info">Reptiles<strong>
-              </div>
-              <div class="selectionBG">
-                <img src="./assets/images/reptiles.jpg"
-                  alt="Green crested lizard in Singapore, Photo by Mark Stoop on Unsplash" />
-              </div>
-            </button>
-          </div>
-         </div>
-          <div class="animal-classifications">
-          <div class="selectionWrapper">
-            <button class="selectionItem" data-type="klass" data-name="insects">
-              <div class="selectionTitle">
-                <strong class="is-size-1 has-text-info">Insects<strong>
-              </div>
-              <div class="selectionBG">
-                <img src="./assets/images/insects.jpg"
-                  alt="a red moth on a leaf, The Ruby Tiger, Photo by Erik Karits on UnsplashSome image" />
-              </div>
-            </button>
-          </div>
-         </div> 
-        
-<!------------------------------- PAGE 3: SELECT ANIMAL TYPE -------------------------------->
+         <!-- <div class="animal-classifications"> -->
+        <div class="column">
+        <div class="selectionWrapper">
+          <button class="selectionItem selectButton" data-type="klass" data-name="fish">
+            <div class="selectionTitle">
+              <strong class="is-size-1 has-text-info">Fish<strong>
+            </div>
+            <div class="selectionBG">
+              <img src="./assets/images/fish.jpg" alt="school of striped fish, Photo by Francesco Ungaro on Unsplash" />
+            </div>
+          </button>
+        </div>
+        <!-- <div class="animal-classifications"> -->
+        <div class="column">
+        <div class="selectionWrapper">
+          <button class="selectionItem selectButton" data-type="klass" data-name="birds">
+            <div class="selectionTitle">
+              <strong class="is-size-1 has-text-info">Birds<strong>
+            </div>
+            <div class="selectionBG">
+              <img src="./assets/images/birds.jpg" alt="flock of parrots, Photo by Gareth Davies on Unsplash" />
+            </div>
+          </button>
+        </div>
+        <!-- <div class="animal-classifications"> -->
+        <div class="columns">
+          <div class="column">
+        <div class="selectionWrapper">
+          <button class="selectionItem selectButton" data-type="klass" data-name="reptiles">
+            <div class="selectionTitle">
+              <strong class="is-size-1 has-text-info">Reptiles<strong>
+            </div>
+            <div class="selectionBG">
+              <img src="./assets/images/reptiles.jpg"
+                alt="Green crested lizard in Singapore, Photo by Mark Stoop on Unsplash" />
+            </div>
+          </button>
+        </div>
+         <!-- <div class="animal-classifications"> -->
+        <div class="selectionWrapper">
+          <button class="selectionItem selectButton" data-type="klass" data-name="insects">
+            <div class="selectionTitle">
+              <strong class="is-size-1 has-text-info">Insects<strong>
+            </div>
+            <div class="selectionBG">
+              <img src="./assets/images/insects.jpg"
+                alt="a red moth on a leaf, The Ruby Tiger, Photo by Erik Karits on UnsplashSome image" />
+            </div>
+          </button>
+        </div>
+      
+      <!------------------------------- PAGE 3: SELECT ANIMAL TYPE -------------------------------->
 
-                                   <!-- DOM MANIPULATION -->
+      <!-- DOM MANIPULATION -->
 
-<!----------PAGE 4: DISPLAY ARTICLE (top), SAVED SEARCHES (lower left col), THREE IMAGE CARDS (lower right cols)-------------->
+      <!----------PAGE 4: DISPLAY ARTICLE (top), SAVED SEARCHES (lower left col), THREE IMAGE CARDS (lower right cols)-------------->
 
-          <div class="modal" id="modal">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-             <div class="column">
-             <!-- article section-->
-                <p class="bd-notification is-danger">Creature Feature</p>
-                <div class="columns is-mobile">
-                  <div class="column is-half">
-                    <div class="card" id="some kind of jquery id">
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-left">
-                            <div class="media-content">
-                            </div>
-                          </div>
-                          </div>
+      <div class="modal" id="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="column">
+            <!-- article section-->
+            <p class="bd-notification is-danger">Creature Feature</p>
+            <div class="columns is-mobile">
+              <div class="column is-half">
+                <div class="card" id="some kind of jquery id">
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-left">
+                        <div class="media-content">
                         </div>
                       </div>
-                    <!-- saved searches -->
-                    <p class="bd-notification is-danger">You have learned about:</p>
-                    <div class="modal">
-                      <div class="modal-background"></div>
-                      <div class="modal-content">
-                      </div>
                     </div>
                   </div>
-                  <!-- giphy x3 (CARDS? OPTIONAL)-->
-                  <div class="column">
-                    <p class="bd-notification is-info">Here is</p>
-                    <div class="modal">
-                      <div class="modal-background"></div>
-                      <div class="modal-content">
-                        <p class="image is-4by3">
-                          <img src="#" alt="">
-                        </p>
-                     </div>
+                </div>
+                <!-- saved searches -->
+                <p class="bd-notification is-danger">You have learned about:</p>
+                <!-- <div class="modal"> -->
+                  <div class="modal-background"></div>
+                  <div class="modal-content">
+                  </div>
+                </div>
+              </div>
+              <!-- giphy x3 (CARDS? OPTIONAL)-->
+              <div class="column">
+                <p class="bd-notification is-info">Here is</p>
+                <!-- <div class="modal"> -->
+                  <div class="modal-background"></div>
+                  <div class="modal-content">
+                    <p class="image is-4by3">
+                      <img src="./assets/images/piranha.jpg" alt="">
+                    </p>
+                  </div>
                   <div class="column">
                     <p class="bd-notification is-info">what I</p>
-                    <div class="modal">
+                    <!-- <div class="modal"> -->
                       <div class="modal-background"></div>
                       <div class="modal-content">
                         <p class="image is-4by3">
-                          <img src="#" alt="">
+                          <img src="./assets/images/whale-shark.jpg" alt="">
                         </p>
                       </div>
                     </div>
-                  </div>  
+                  </div>
                   <div class="column">
                     <p class="bd-notification is-info">look like!</p>
-                    <div class="modal">
+                    <!-- <div class="modal"> -->
                       <div class="modal-background"></div>
                       <div class="modal-content">
                         <p class="image is-4by3">
-                          <img src="#" alt="">
+                          <img src="./assets/images/blobfish.jpg" alt="">
                         </p>
                       </div>
                     </div>
                   </div>
-  <!------------------------------- "CLOSE" BUTTON STARTS NEW SEARCH -------------------------------->
-                  <button class="modal-close is-large has-text-centered mt-6" aria-label="close">
+                  <!------------------------------- "CLOSE" BUTTON STARTS NEW SEARCH -------------------------------->
+                  <!-- <button class="modal-close is-large has-text-centered mt-6" aria-label="close"> -->
                     Learn about more animals!</button>
-                  </div>
-               </div>
+                </div>
               </div>
-             </div>
             </div>
-           </div>
+          </div>
+        </div>
+      </div>
 
- <script src="./assets/js/script.js"></script>
+      <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
 
 <!-- we COULD use a navbar to access saved searches -->
-  <!-- <nav class="navbar">
+<!-- <nav class="navbar">
     <div class="container">
       <div id="navMenu" class="navbar-menu">
         <div class="navbar-start">
@@ -223,4 +223,3 @@
       </p>
     </div>
   </section> -->
-
