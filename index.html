@@ -47,8 +47,8 @@
     <div class="box is-15-tablet is-20-desktop has-text-centered mt-6">
       <div class="is-primary">
         <ul>
-
-          <div class="selectionWrapper">
+          <div class="animal-classifications" 
+            <div class="selectionWrapper">
             <button class="selectionItem" data-type="klass" data-name="mammals">
               <div class="selectionTitle">
                 <strong class="is-size-1 has-text-info">Mammals<strong>
@@ -59,8 +59,9 @@
               </div>
             </button>
           </div>
-
-          <div class="selectionWrapper">
+         </div>
+         <div class="animal-classifications">
+           <div class="selectionWrapper">
             <button class="selectionItem" data-type="klass" data-name="fish">
               <div class="selectionTitle">
                 <strong class="is-size-1 has-text-info">Fish<strong>
@@ -70,8 +71,9 @@
                   alt="school of striped fish, Photo by Francesco Ungaro on Unsplash" />
               </div>
             </button>
-          </div>
-
+           </div>
+         </div>
+          <div class="animal-classifications">
           <div class="selectionWrapper">
             <button class="selectionItem" data-type="klass" data-name="birds">
               <div class="selectionTitle">
@@ -82,8 +84,9 @@
               </div>
             </button>
           </div>
-
-          <div class="selectionWrapper">
+         </div>
+          <div class="animal-classifications">
+           <div class="selectionWrapper">
             <button class="selectionItem" data-type="klass" data-name="reptiles">
               <div class="selectionTitle">
                 <strong class="is-size-1 has-text-info">Reptiles<strong>
@@ -94,21 +97,8 @@
               </div>
             </button>
           </div>
-<body>
-    <div class="startPage" id="content"><!-- CSS: Set this to function like bootstrap's container-->
-
-        <div class="" id="content-head"><!-- CS: Set this to function like bootstrap's row-->
-            <!-- Note: The content-head is the wrapper that we can append heading/subheading content -->
-
-            <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
-                <div class="column is-15-tablet is-20-desktop has-text-centered">
-                <p= has-text-danger>
-                    <strong class="is-size-1 has-text-danger title">Lets see some animals!<strong>
-                </p>
-                </div>
-            </div><!-- This is the content from your original index.html -->
-        </div>
-
+         </div>
+          <div class="animal-classifications">
           <div class="selectionWrapper">
             <button class="selectionItem" data-type="klass" data-name="insects">
               <div class="selectionTitle">
@@ -120,7 +110,8 @@
               </div>
             </button>
           </div>
-
+         </div> 
+        
 <!------------------------------- PAGE 3: SELECT ANIMAL TYPE -------------------------------->
 
                                    <!-- DOM MANIPULATION -->
@@ -135,7 +126,7 @@
                 <p class="bd-notification is-danger">Creature Feature</p>
                 <div class="columns is-mobile">
                   <div class="column is-half">
-                    <div class="card">
+                    <div class="card" id="some kind of jquery id">
                       <div class="card-content">
                         <div class="media">
                           <div class="media-left">
@@ -153,7 +144,7 @@
                       </div>
                     </div>
                   </div>
-                  <!-- giphy x3 -->
+                  <!-- giphy x3 (CARDS? OPTIONAL)-->
                   <div class="column">
                     <p class="bd-notification is-info">Here is</p>
                     <div class="modal">
@@ -196,54 +187,6 @@
            </div>
 
  <script src="./assets/js/script.js"></script>
-            <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
-                <!-- <a href="classifications.html"> -->
-                <button class="startButton2 is-size-1">Start</button>
-                </a>
-            </div><!-- This is the content from your original index.html -->
-        </div>   
-
-    </div>
-    <div class="selectionWrapper">
-        <button class="selectionItem" data-type="animal" data-name="whale">
-            <div class="selectionTitle">
-                whale
-            </div>
-            <div class="selectionBG">
-                <img src="#" alt="Some image" />
-            </div>
-        </button>
-        <button class="selectionItem" data-type="animal" data-name="zebra">
-            <div class="selectionTitle">
-                zebra
-            </div>
-            <div class="selectionBG">
-                <img src="#" alt="Some image" />
-            </div>
-        </button>
-        <button class="selectionItem" data-type="animal" data-name="Platypus">
-            <div class="selectionTitle">
-                platypus
-            </div>
-            <div class="selectionBG">
-                <img src="#" alt="Some image" />
-            </div>
-        </button>
-        <button class="selectionItem" data-type="animal" data-name="polar_bear">
-            <div class="selectionTitle">
-                polar_bear
-            </div>
-            <div class="selectionBG">
-                <img src="#" alt="Some image" />
-            </div>
-        </button>
-    </div>
-    <!-- NOTE: This is the anchor point for the modal DOM Element. The Layout structure you specify in your individual modal html file will be added via jQuery -->
-    <div class="" id="modal"></div><!-- CSS: Set this to function like bootstrap's modal-->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
@@ -280,3 +223,4 @@
       </p>
     </div>
   </section> -->
+
