@@ -119,3 +119,60 @@
     </p>
   </div>
 </section> -->
+
+<!-- 
+    NOTE: I updated the file with a basic HTML structure we need to follow to easily move content around with jQuery.
+
+    * If possible, when you test out the individual html files, update the layout structure 
+    to conform to the content > content-head, content-body format. Backend will use your html
+    as templates for adding and removing DOM elements.
+
+    * Since we arent going to be functionally using separate html files, update your current html 
+    to not use the <a> attribute and use IDs or Classes for jQuery to operate from.
+
+    * For Classification/Animal Selection buttons, use am html structure that looks similar to this.
+    You can use bulma or custom css classes to conform to your design. Backend just needs the elements/css class to 
+    layout like:
+
+        <div class="selectionWrapper">
+            <button class="selectionItem" data-type="" data-name="">
+                <div class="selectionTitle">
+                    Lorem Ipsum
+                </div>
+                <div class="selectionBG">
+                    <img src="#" alt="Some image" />
+                </div>
+            </button>
+        </div>
+
+        - data-type is either: "klass" or "animal". 
+                o If the button is for a classification, set it to "klass".
+                o If the button is for a animal, set it to "animal"
+        - data-name is either an animal or classification name. see animalObj for complete list of names.
+    
+    * When you test the modal content, be sure you format it to fit within the new modal wrapper I added to the layout.
+
+    * We need to work a back button into the animal selection menu so that users can navigate all choices. If you give 
+    the button element an id of "selectionBack", backend will create an event listener for it.
+-->
+
+<!-- ------------------------------------original code ----------------------------------------- -->
+<!-- <body> -->
+    <!-- <div class="" id="content"> CSS: Set this to function like bootstrap's container -->
+
+        <!-- <div class="" id="content-head"> CSS: Set this to function like bootstrap's row -->
+            <!-- Note: The content-head is the wrapper that we can append heading/subheading content -->
+
+                   <!-- <div class="" id="content-body"> TO DO: Set this to function like bootstrap's row -->
+            <!-- Note: The content-body is the wrapper that we can append the classification/animal-selection lists/buttons -->
+
+            <!-- <div class="column is-15-tablet is-20-desktop has-text-centered mt-6"> -->
+                <!-- <a href="classifications.html"> -->
+                <!-- <button class="startButton is-size-1">Start</button> -->
+                <!-- </a> -->
+            <!-- </div>This is the content from your original index.html -->
+        <!-- </div>    -->
+
+    <!-- </div> -->
+    <!-- NOTE: This is the anchor point for the modal DOM Element. The Layout structure you specify in your individual modal html file will be added via jQuery -->
+    <!-- <div class="" id="modal"></div>CSS: Set this to function like bootstrap's modal -->
