@@ -1,17 +1,35 @@
 body {
+    background-color: khaki;
     font-family: ui-sans-serif;
+    text-shadow: 0px 2px 2px #A4A7A5;
+    }
+
+
+img {
+    height: 30;
+    max-width: 30%;
+    border-radius: 5px;
 }
 
+/* .selectionWrapper {
+    box is-15-tablet is-20-desktop has-text-centered mt-6
+} */
 
 
-/* .startButton {
-    display: block;
+.startButton {
     flex-direction: row;
     justify-content: center/space-around;
     text-align: center;
+    border-radius: 5px;
 	font-weight: bold;
 	text-shadow: 0px 1px 1px #A4A7A5;
-} */
+}
+
+/* image card styling */
+.image-card {
+background-color: chocolate;
+}
+
 /* Button classes */
 .selectionWrapper{
     display: none;
@@ -19,7 +37,7 @@ body {
 
 .animalType {
     display: block;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center/space-around;
     text-align: center;
     font-weight: bold;
