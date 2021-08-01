@@ -166,56 +166,24 @@ async function getAnimalByAnimalName(animal_name) {
 
 var createClassification = function () {
     //hides first page content
-    $('.title').hide(); //display-none using css and the add class to show and hide via jquery toogle
+    $('.practice').hide(); //display-none using css and the add class to show and hide via jquery toogle
     $('.startButton').hide();
-    // $('<button/>', {
-    //     id: 'some-id',
-    //     dataType: 'klass',
-    //     dataName: 'mammals',
-    //     text: 'Mammals',
-    //     "class": 'some-class',
-    // }).appendTo('#content-head');
-    
-    // $('<button/>', {
-    //     id: 'some-id',
-    //     dataType: 'klass',
-    //     dataName: 'fish' ,
-    //     text: 'Fish',
-    //     "class": 'some-class',
-    // }).appendTo('#content-head');
-
-    // $('<button/>', {
-    //     id: 'some-id',
-    //     dataType: 'klass',
-    //     dataName: 'insects' ,
-    //     text: 'Birds',
-    //     "class": 'some-class',
-    // }).appendTo('#content-head');
-
-    // $('<button/>', {
-    //     id: 'some-id',
-    //     dataType: 'klass',
-    //     dataName: 'birds' ,
-    //     text: 'Reptiles',
-    //     "class": 'klass',
-    // }).appendTo('#content-head');
-
-    // $('<button/>', {
-    //     id: 'some-id',
-    //     dataType: 'klass',
-    //     dataName: 'reptiles' ,
-    //     text: 'Insects',
-    //     "class": 'some-class',
-    //}).appendTo('#content-head');
 }
 
 $('.startButton').on('click', function() {
-    alert('button clicked');
+    $('.practice').hide();
+    //$('.startButton').hide();
+    console.log('Start Button was clicked')
+
     //createClassification();
     /*
         - Remove Start Content
         - Add Animal Classifiation HTML to DOM
     */
+})
+
+$('.startButton2').on('click', function() {
+    $('.practice').show();
 })
 
 var createAnimal = function(){
@@ -245,6 +213,7 @@ var createAnimal = function(){
 
 $('.selectionItem').on('click',function() {
     alert('button was clicked');
+
    $('button').atr(attribute)
 });
 
