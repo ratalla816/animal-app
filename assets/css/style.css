@@ -4,11 +4,10 @@ body {
     text-shadow: 0px 2px 2px #A4A7A5;
     }
 
-
 img {
     height: 30%;
     max-width: 30%;
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
 /* .selectionWrapper {
@@ -23,20 +22,39 @@ button:hover{
     flex-direction: row;
     justify-content: center/space-around;
     text-align: center;
-    border-radius: 5px;
-	font-weight: bold;
-	text-shadow: 0px 1px 1px #A4A7A5;
+    border-radius: 25px;
+    font-weight: bold;
+    text-shadow: 0px 1px 1px #A4A7A5;
 }
 
-.animal-classifications {
+.selectButton {
+    flex-direction: row;
+    justify-content: center/space-around;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    text-shadow: 0px 1px 1px #A4A7A5;    
+}
+
+/* .selectionWrapper {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center/space-around;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    text-shadow: 0px 1px 1px #A4A7A5;
+} */
+
+/* .animal-classifications {
     display: flex; 
     flex-direction: column;
     justify-content: center/space-around;
     text-align: center;
     border-radius: 5px;
-	font-weight: bold;
-	text-shadow: 0px 1px 1px #A4A7A5;
-}
+    font-weight: bold;
+    text-shadow: 0px 1px 1px #A4A7A5;
+} */
 
 /* image card styling  OPTIONAL */
 .image-card {
@@ -50,7 +68,7 @@ background-color: chocolate;
     justify-content: center/space-around;
     text-align: center;
     font-weight: bold;
-	text-shadow: 0px 1px 1px #A4A7A5;
+    text-shadow: 0px 1px 1px #A4A7A5;
 }
 
 .animalSelection {
@@ -58,8 +76,8 @@ background-color: chocolate;
     flex-direction: row;
     justify-content: center/space-around;
     text-align: center;
-	font-weight: bold;
-	text-shadow: 0px 1px 1px #A4A7A5;
+    font-weight: bold;
+    text-shadow: 0px 1px 1px #A4A7A5;
 }
 
 /* Data Types */
@@ -83,3 +101,5 @@ background-color: chocolate;
       font-size: 0.8rem;
     }
   }
+
+
