@@ -171,6 +171,7 @@ var createClassification = function () {
     $('<button/>', {
         id: 'some-id',
         dataType: 'klass',
+        dataName: 'mammals',
         text: 'Mammals',
         "class": 'some-class',
     }).appendTo('#content-head');
@@ -178,6 +179,7 @@ var createClassification = function () {
     $('<button/>', {
         id: 'some-id',
         dataType: 'klass',
+        dataName: 'fish' ,
         text: 'Fish',
         "class": 'some-class',
     }).appendTo('#content-head');
@@ -185,6 +187,7 @@ var createClassification = function () {
     $('<button/>', {
         id: 'some-id',
         dataType: 'klass',
+        dataName: 'insects' ,
         text: 'Birds',
         "class": 'some-class',
     }).appendTo('#content-head');
@@ -192,6 +195,7 @@ var createClassification = function () {
     $('<button/>', {
         id: 'some-id',
         dataType: 'klass',
+        dataName: 'birds' ,
         text: 'Reptiles',
         "class": 'klass',
     }).appendTo('#content-head');
@@ -199,6 +203,7 @@ var createClassification = function () {
     $('<button/>', {
         id: 'some-id',
         dataType: 'klass',
+        dataName: 'reptiles' ,
         text: 'Insects',
         "class": 'some-class',
     }).appendTo('#content-head');
@@ -216,8 +221,8 @@ var createAnimal = function(){
     $('.animal').hide();
     $('<button/>', {
         id: 'some-id',
-        dataType: 'aimal',
-        text: 'Mammals',
+        dataType: 'animal',
+        text: 'ANIMAL NAME HERE',
         "class": 'some-class',
     }).appendTo('#content-head');
 };
@@ -238,7 +243,8 @@ var createAnimal = function(){
 */
 
 $('.selectionItem').on('click',function() {
-   
+    alert('button was clicked');
+   $('button').atr(attribute)
 });
 
 $('.animalSelection').on('click',function() {
