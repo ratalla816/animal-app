@@ -13,6 +13,11 @@ img {
 /* .selectionWrapper {
     box is-15-tablet is-20-desktop has-text-centered mt-6
 } */
+/* start addition for jquery */
+.classification{
+    display: none;
+}
+/* end of addition for jquery */
 
 button:hover{
     box-shadow: 4px 3px 6px #3b3703;

@@ -164,16 +164,12 @@ async function getAnimalByAnimalName(animal_name) {
 
 */
 
-var createClassification = function () {
-    //hides first page content
-    $('.practice').hide(); //display-none using css and the add class to show and hide via jquery toogle
-    $('.startButton').hide();
-}
 
 $('.startButton').on('click', function() {
     $('.practice').hide();
     //$('.startButton').hide();
     console.log('Start Button was clicked')
+    $('.classification').show();
 
     //createClassification();
     /*
@@ -182,9 +178,6 @@ $('.startButton').on('click', function() {
     */
 })
 
-$('.startButton2').on('click', function() {
-    $('.practice').show();
-})
 
 var createAnimal = function(){
     $('.animal').hide();
