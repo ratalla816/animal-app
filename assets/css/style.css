@@ -30,7 +30,7 @@ button:hover{
 .selectButton {
     padding: .25rem;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
     text-align: center;
     border-radius: 25px;
     font-weight: bold;

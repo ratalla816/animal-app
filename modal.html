@@ -7,30 +7,41 @@
 
     
  <body>
-     
-    <div id="content" class="container">
-		<div class="row">
+    <div class="container is-right">
+        <div class="notification is-danger">
+          <strong>Featured Creature!</strong>
+        </div>
+      </div>
 
- <!-- Left side content with previously serached animals -->
-	<div id="content-left" class="col-md-3">
-        <p class="bd-notification is-danger">You have learned about:</p>	
-		<!-- list of prior searched animals -->
-		<ul id="previous-searches" class="list-group mt-4"></ul>
-		</div>
+     <!-- Left side content with previously serached animals -->
+<div class="level">
+<!-- Left side -->
+<div class="level-left">
+<div class="level-item">
+<p class="subtitle is-3">
+<strong>You have learned about:</strong>
+</p>
+</div>
+<div class="level-item">
+<div class="field has-addons">
+<ul id="previous-searches" class="list-group mt-4"></ul>
+</div>
+</div>
+
+<!-- Right side -->
+<div class="level-right">
+<div class="level-item"> <div id="animal-article" class="border rounded"></div>
+</div>
+</div>    
+ 
 			
-        <!-- current animal article is on Right side  -->
-			<div id="content-right" class="col-md-9 pt-4">
-                <p class="bd-notification is-danger">Creature Feature</p>
-				<div id="animal-article" class="border rounded"></div>
-            </div>
-		</div>
-	</div>
+        
 
     <!-- Giphys x 3  -->
     
     <div class="block">
         <div class="column level-right">
-             <!-- <div class="column"> -->
+             <div class="column">
     <div class="card">
         <div class="card-image">
           <figure class="image is-4by3">
@@ -38,7 +49,7 @@
           </figure>
         </div>
       </div>
-      <!-- <div class="column"> -->
+      <div class="column">
       <div class="card">
         <div class="card-image">
           <figure class="image is-4by3">
@@ -46,7 +57,7 @@
           </figure>
         </div>
       </div>
-     <!-- <div class="column"> -->
+     <div class="column">
       <div class="card">
         <div class="card-image">
           <figure class="image is-4by3">
@@ -56,14 +67,15 @@
       </div>
     </div>
  <!------------------------------- "CLOSE" BUTTON STARTS NEW SEARCH -------------------------------->
- <div class="close-button"     
- <button class="modal-close is-large has-text-centered mt-6" aria-label="close"> 
-           Learn about more animals!</button>
-         <a>
-     </div>
-  </div>
+ <footer class="footer content has-text-centered">
+    <div class="close-button"
+   <button class="modal-close is-large has-text-centered mt-6" aria-label="close"> 
+            Learn about more animals!</button>
+    </div>
+ </footer>
+  
 
-  <script src="./assets/js/script.js"></script>    
+ <script src="./assets/js/script.js"></script>    
 </body>
 
 </html>     
