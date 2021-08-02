@@ -13,7 +13,7 @@
   <!------------------------------- START PAGE -------------------------------->
 <div class="startPage" id="content">
 
-    <div class="column is-15-tablet is-20-desktop has-text-centered mt-6 has-background-danger practice" id="content-head">
+    <div class="column is-15-tablet is-20-desktop has-text-centered mt-6 has-background-danger" id="content-head">
         <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
         <div class="column is-15-tablet is-20-desktop has-text-centered">
             <p= has-text-danger>
@@ -25,11 +25,11 @@
     </div>
     
    
-    </div>
 </div>
 
+
   <!------------------------------- PAGE 2: SELECT ANIMAL CLASSIFICATION -------------------------------->
-  <div class="classification">
+<div class="classification">
 
   <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
     <div class="column is-15-tablet is-20-desktop has-text-centered">
@@ -49,6 +49,7 @@
           <!-- <div class="animal-classifications">  -->
             <!-- <div class="columns"> -->
               <!-- <div class="column"> -->
+
           <div class="selectionWrapper">
             <button class="selectionItem selectButton" data-type="klass" data-name="mammals">
               <div class="selectionTitle">
@@ -110,6 +111,7 @@
             </div>
           </button>
         </div>
+
     </div>
       
       <!------------------------------- PAGE 3: SELECT ANIMAL TYPE -------------------------------->
@@ -117,10 +119,12 @@
       <!-- DOM MANIPULATION -->
 
       <!----------PAGE 4: DISPLAY ARTICLE (top), SAVED SEARCHES (lower left col), THREE IMAGE CARDS (lower right cols)-------------->
-
+    
       <div class="modal" id="modal">
-        <div class="modal-background"></div>
+        <div class="modal-background">
+        </div>
         <div class="modal-content">
+
           <div class="column">
             <!-- article section-->
             <p class="bd-notification is-danger">Creature Feature</p>
@@ -139,7 +143,9 @@
                 <!-- saved searches -->
                 <p class="bd-notification is-danger">You have learned about:</p>
                 <!-- <div class="modal"> -->
-                  <div class="modal-background"></div>
+                  <div class="modal-background">
+                  </div>
+
                   <div class="modal-content">
                   </div>
                 </div>
@@ -177,14 +183,18 @@
                     </div>
                   </div>
                   <!------------------------------- "CLOSE" BUTTON STARTS NEW SEARCH -------------------------------->
-                  <!-- <button class="modal-close is-large has-text-centered mt-6" aria-label="close"> -->
-                    Learn about more animals!</button>
+                    <button class="modal-close is-large has-text-centered mt-6" aria-label="close">
+                        Learn about more animals!
+                    </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+    
+    </div>
+
+   
 
      
 </body>
@@ -193,36 +203,3 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script src="./assets/js/script.js"></script>
-
-<!-- we COULD use a navbar to access saved searches -->
-<!-- <nav class="navbar">
-    <div class="container">
-      <div id="navMenu" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-            Home
-          </a>
-          <a class="navbar-item">
-            Documentation
-          </a>
-        </div>
-  
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-dark">Github</a>
-              <a class="button is-link">Download</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-  
-  <section class="hero is-link is-fullheight-with-navbar">
-    <div class="hero-body">
-      <p class="title">
-        Fullheight hero with navbar
-      </p>
-    </div>
-  </section> -->

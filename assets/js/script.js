@@ -166,16 +166,11 @@ async function getAnimalByAnimalName(animal_name) {
 
 
 $('.startButton').on('click', function() {
-    $('.practice').hide();
-    //$('.startButton').hide();
-    console.log('Start Button was clicked')
+    //hides start page
+    $('.startPage').hide();
+    //shows classification page
     $('.classification').show();
-
-    //createClassification();
-    /*
-        - Remove Start Content
-        - Add Animal Classifiation HTML to DOM
-    */
+    console.log('Start Button was clicked');
 })
 
 
@@ -205,9 +200,17 @@ var createAnimal = function(){
 */
 
 $('.selectionItem').on('click',function() {
-    alert('button was clicked');
+    console.log('class clicked');
 
-   $('button').atr(attribute)
+    var dataType = $(this).data('type');
+    console.log(dataType);
+    var dataName = $(this).data('name');
+    console.log(dataName);
+    
+    if(dataType == 'klass'){
+        console.log('true');
+        // 
+    }
 });
 
 $('.animalSelection').on('click',function() {
