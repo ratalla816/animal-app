@@ -44,17 +44,17 @@ button:hover{
     text-shadow: 0px 1px 1px #A4A7A5;    
 }
 
-}
 
-.selectButton {
+
+/* .selectButton {
     padding: .25rem;
-    flex-direction: row;
+    flex-direction: row; */
     /* justify-content: center; */
-    text-align: center;
+    /* text-align: center;
     border-radius: 25px;
     font-weight: bold;
     text-shadow: 0px 1px 1px #A4A7A5;    
-}
+} */
 
 /* .selectionWrapper {
     display: flex; 
