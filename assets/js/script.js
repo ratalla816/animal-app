@@ -182,6 +182,8 @@ var createAnimal = function(){
         text: 'ANIMAL NAME HERE',
         "class": 'some-class',
     }).appendTo('#content-head');
+
+    
 };
 
 /*
@@ -198,6 +200,9 @@ var createAnimal = function(){
             Set animalData within Modal HTML
             Trigger Modal
 */
+
+// giving attribute 
+    //$(this).attr('data-','7')
 
 $('.selectionItem').on('click',function() {
     console.log('class clicked');
