@@ -246,9 +246,6 @@ $('#appActions').on('click', '.selectionItem', async function(e){
     else{
         console.log('false')
     }
-
-
-    createAnimalList();
 });
 
 //When .backToSelection is clicked;
