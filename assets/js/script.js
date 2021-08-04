@@ -115,8 +115,6 @@ async function renderAnimalModal(animalName) {
     var animal = await getAnimalByAnimalName(animalName);
 
     if (animal) {
-        // console.log('updateModalByAnimalName', animalName, animal);
-
         $('#animalTitle').html(humanize(animalName));
         $('#animalWiki').html(animal.wiki);
         $('#animalGiphy').html(animal.giphy);
@@ -239,12 +237,8 @@ $('#appActions').on('click', '.selectionItem', async function(e){
     } else if (selectionType == 'animal') {
 
         //If its an animal, display animal in modal
-        console.log('renderAnimalModal', selectionType, selectionName);
         renderAnimalModal(selectionName);
 
-    }
-    else{
-        console.log('false')
     }
 });
 
