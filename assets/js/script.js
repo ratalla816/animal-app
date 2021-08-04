@@ -154,7 +154,7 @@ async function getAnimalByAnimalName(animal_name) {
 // Sub function called from getAnimalByAnimalName
 // Input animal_name, fetch wiki data, and return text string
 function getWikiByAnimalName(animal_name) {
-    var fetchData = fetch("http://en.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=" + animal_name + "&format=json")
+    var fetchData = fetch("https://en.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=" + animal_name + "&format=json")
     .then((response) => response.json())
     .then(function(data){
 
@@ -168,7 +168,7 @@ function getWikiByAnimalName(animal_name) {
 // Sub function called from getAnimalByAnimalName
 // Input animal_name, fetch giphy data, and return html string
 function getGiphyByAnimalName(animal_name) {
-    var fetchData = fetch('http://api.giphy.com/v1/gifs/search?q=' + animal_name + '&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1')
+    var fetchData = fetch('https://api.giphy.com/v1/gifs/search?q=' + animal_name + '&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1')
     .then((response) => response.json())
     .then(function(data){
         
