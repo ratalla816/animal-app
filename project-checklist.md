@@ -13,13 +13,11 @@ THEN I am able to save the gif and article to view later and I may also choose a
 
 * API's identified:
 
-Wiki "http://en.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Zebra&format=json"
+Wiki 'http://en.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Zebra&format=json'
  
-Giphy "http://api.giphy.com/v1/gifs/search?q=zebra&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1"
+Giphy 'http://api.giphy.com/v1/gifs/search?q=zebra&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1'
 
-Pixabay "https://pixabay.com/api
-
-
+Pixabay 'https://pixabay.com/api/?key=22691826-3e6bf0771812c9d2424ab24b4’
 
 
 * Issues created and assigned: Yes
