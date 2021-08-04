@@ -2,6 +2,7 @@
 <html>
 
 <head>
+<<<<<<< HEAD
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
@@ -55,3 +56,193 @@
 </body>
 
 </html>
+=======
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Animal Explorer</title>
+</head>
+
+<body>
+  <!------------------------------- START PAGE -------------------------------->
+  <div class="startPage" id="content">
+
+    <div class="column is-15-tablet is-20-desktop has-text-centered mt-6 has-background-danger" id="content-head">
+      <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
+        <div class="column is-15-tablet is-20-desktop has-text-centered">
+            <h1 class="is-size-1 has-text-light has-background-danger title">Lets see some animals!<h1>
+        </div>
+      </div>
+      <button class="startButton is-size-1 has-background-info has-text-light">Start</button>
+    </div>
+  </div>
+
+
+  <!------------------------------- PAGE 2: SELECT ANIMAL CLASSIFICATION -------------------------------->
+  <div class="content classification ">
+    <h2 class="has-text-centered title-classification">
+        <p>Pick an animal classification!!!</p>
+        <p>Some are creepy,</p>
+        <p>some are BIG,</p>
+        <p>you will love them ALL!</p>         
+    </h2>
+    <div class="container titles">
+        <div class="columns">
+            <div class="column is-4">
+                <button class="button is-large is-rounded is-fullwidth is-primary is-outlined selectionItem" data-type="klass" data-name="mammals">
+                    <span class="icon is-medium">
+                        <i class="fas fa-horse-head"></i>
+                    </span>
+                    <span class="has-text-weight-bold">Mammals</span>
+                </button>
+            </div>
+            <div class="column is-4">
+                <button class="button is-large is-rounded is-fullwidth is-primary is-outlined selectionItem" data-type="klass" data-name="fishes">
+                    <span class="icon is-medium">
+                        <i class="fas fa-fish"></i>
+                    </span>
+                    <span class="has-text-weight-bold">Fishes</span>
+                </button>
+            </div>
+            <div class="column is-4">
+                <button class="button is-large is-rounded is-fullwidth is-primary is-outlined selectionItem" data-type="klass" data-name="birds">
+                    <span class="icon is-medium">
+                        <i class="fas fa-dove"></i>
+                    </span>
+                    <span class="has-text-weight-bold">Birds</span>
+                </button>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-6">
+                <button class="button is-large is-rounded is-fullwidth is-primary is-outlined selectionItem" data-type="klass" data-name="reptiles">
+                    <span class="icon is-medium">
+                        <i class="fas fa-dragon"></i>
+                    </span>
+                    <span class="has-text-weight-bold">Reptiles</span>
+                </button>
+            </div>
+            <div class="column is-6">
+                <button class="button is-large is-rounded is-fullwidth is-primary is-outlined selectionItem" data-type="klass" data-name="insects">
+                    <span class="icon is-medium">
+                        <i class="fas fa-spider"></i>
+                    </span>
+                    <span class="has-text-weight-bold">Insects</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------------------------- PAGE 3: SELECT ANIMAL TYPE -------------------------------->
+<div class="content animalsList ">
+  <h2 class="has-text-centered title-classification">
+      <p>Pick an animal!!!</p>        
+  </h2>
+  <div class="container">
+    <div class="columns animals3" id="ani">
+      
+    </div>
+    <div class="columns animals2" id="ani">
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+           
+            <!------------------------------- PAGE 3: SELECT ANIMAL TYPE -------------------------------->
+
+            <!-- DOM MANIPULATION -->
+
+            <!----------PAGE 4: DISPLAY ARTICLE (top), SAVED SEARCHES (lower left col), THREE IMAGE CARDS (lower right cols)-------------->
+
+            <!-- <div class="modal is-medium is-active" id="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                      <div class="column">
+                        article section
+                        <p class="bd-notification is-danger">Creature Feature</p>
+                        <div class="columns is-mobile">
+                          <div class="column is-half">
+                            <div class="card" id="some kind of jquery id">
+                              <div class="card-content">
+                                <div class="media">
+                                  <div class="media-left">
+                                    <div class="media-content">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            saved searches
+                            <p class="bd-notification is-danger">You have learned about:</p>
+                            <div class="modal is-active"> 
+                            <div class="modal-background"></div>
+                            <div class="modal-content" id="savedSearches">
+                            </div>
+                          </div>
+                        </div>
+                        giphy x3 (CARDS? OPTIONAL)
+                        <div class="column">
+                          <p class="bd-notification is-info">Here is</p>
+                          <div class="modal is-active"> 
+                          <div class="modal-background"></div>
+                          <div class="modal-content">
+                            <p class="image is-3by3">
+                              <img src="./assets/images/piranha.jpg" alt="">
+                            </p>
+                          </div>
+                          <div class="column">
+                            <p class="bd-notification is-info">what I</p>
+                            <div class="modal is-active">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                              <p class="image is-3by3">
+                                <img src="./assets/images/whale-shark.jpg" alt="">
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="column">
+                          <p class="bd-notification is-info">look like!</p>
+                          <div class="modal is-active">
+                          <div class="modal-background"></div>
+                          <div class="modal-content">
+                            <p class="image is-3by3">
+                              <img src="./assets/images/blobfish.jpg" alt="">
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      ----------------------------- "CLOSE" BUTTON STARTS NEW SEARCH ------------------------------
+                       <button class="modal-close is-large has-text-centered mt-6" aria-label="close"> -->
+            <!-- Learn about more animals!</button> -->
+            <!-- </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="./assets/js/script.js"></script>
+
+</html>
+>>>>>>> ec18d33114c16f0214b3b9d8092e00954deaa141
