@@ -1,0 +1,386 @@
+  <!------------------------------- START PAGE -------------------------------->
+<!-- <div class="startPage" id="content">
+
+    <div class="column is-15-tablet is-20-desktop has-text-centered mt-6 has-background-danger" id="content-head">
+        <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
+        <div class="column is-15-tablet is-20-desktop has-text-centered">
+            <p= has-text-danger>
+            <strong class="is-size-1 has-text-light has-background-danger title">Lets see some animals!<strong>
+            </p>
+        </div>
+        </div>
+        <button class="startButton is-size-1 has-background-info has-text-light">Start</button>
+  <div class="startPage" id="content"></div>
+
+  <div class="column is-15-tablet is-20-desktop has-text-centered mt-6 has-background-danger" id="content-head">
+    <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
+      <div class="column is-15-tablet is-20-desktop has-text-centered">
+        <p= has-text-danger>
+          <strong class="is-size-1 has-text-light has-background-danger">Lets see some animals!<strong>
+              </p>
+      </div>
+    </div>
+    
+   
+</div> -->
+
+
+  <!------------------------------- PAGE 2: SELECT ANIMAL CLASSIFICATION -------------------------------->
+<!-- <div class="classification">
+
+  <div class="classification"></div>
+  <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
+    <div class="column is-15-tablet is-20-desktop has-text-centered">
+      <p= has-text-danger>
+        <strong class="is-size-1 has-text-danger">Pick an animal classification!<strong>
+            </p>
+            <p= has-text-danger>
+              <strong class="is-size-1 has-text-danger">Some are cute. Some are creepy. Some are BIG. Some are small..
+                You will love them ALL!<strong>
+                  </p>
+    </div>
+  </div>
+
+  <div class="" id="content-head">
+    <div class="box is-5-tablet is-10-desktop has-text-centered mt-6">
+      <div class="is-primary"> -->
+          <!-- <div class="animal-classifications">  -->
+            <!-- <div class="columns"> -->
+              <!-- <div class="column"> -->
+
+          <!-- <div class="selectionWrapper">
+            <button class="selectionItem selectButton" data-type="klass" data-name="mammals">
+   <div class="" id="content-head">
+    <div class="box is-5-tablet is-10-desktop has-text-centered mt-6">
+      <div class="is-primary">
+        <ul> -->
+          <!-- <div class="animal-classifications">  -->
+            <!-- <div class="block"> -->
+           <!-- <div class="columns">
+          <div class="column">
+          <div class="selectionWrapper">
+            <button class="selectButton is-normal" data-type="klass" data-name="mammals">
+              <div class="selectionTitle">
+                <strong class="is-size-2 has-text-info">Mammals<strong>
+              </div>
+              <div class="selectionBG">
+                <img src="./assets/images/mammal.jpg"
+                  alt="Red Fox, Wildlife in Winter Photo by Ray Hennessy on Unsplash" />
+              </div>
+            </button>
+          </div> -->
+         <!-- <div class="animal-classifications"> -->
+        <!-- <div class="column">
+        <div class="selectionWrapper">
+          <button class="selectionItem selectButton" data-type="klass" data-name="fish">
+            <div class="selectionTitle">
+              <strong class="is-size-1 has-text-info">Fish<strong>
+            </div>
+            <div class="selectionBG">
+              <img src="./assets/images/fish.jpg" alt="school of striped fish, Photo by Francesco Ungaro on Unsplash" />
+            </div>
+          </button>
+        </div> -->
+        <!-- <div class="animal-classifications"> -->
+        <!-- <div class="column">
+        <div class="selectionWrapper">
+          <button class="selectionItem selectButton" data-type="klass" data-name="birds">
+            <div class="selectionTitle">
+              <strong class="is-size-1 has-text-info">Birds<strong>
+            </div>
+            <div class="selectionBG">
+              <img src="./assets/images/birds.jpg" alt="flock of parrots, Photo by Gareth Davies on Unsplash" />
+            </div>
+          </button>
+        </div> -->
+        <!-- <div class="animal-classifications"> -->
+        <!-- <div class="columns">
+          <div class="column">
+        <div class="selectionWrapper">
+          <button class="selectionItem selectButton" data-type="klass" data-name="reptiles">
+            <div class="selectionTitle">
+              <strong class="is-size-1 has-text-info">Reptiles<strong>
+            </div>
+            <div class="selectionBG">
+              <img src="./assets/images/reptiles.jpg"
+                alt="Green crested lizard in Singapore, Photo by Mark Stoop on Unsplash" />
+            </div>
+          </button>
+        </div> -->
+         <!-- <div class="animal-classifications"> -->
+        <!-- <div class="selectionWrapper">
+          <button class="selectionItem selectButton" data-type="klass" data-name="insects">
+            <div class="selectionTitle">
+              <strong class="is-size-1 has-text-info">Insects<strong>
+            </div>
+            <div class="selectionBG">
+              <img src="./assets/images/insects.jpg"
+                alt="a red moth on a leaf, The Ruby Tiger, Photo by Erik Karits on UnsplashSome image" />
+            </div>
+          </button>
+        </div> -->
+
+    <!-- </div> -->
+      
+      <!------------------------------- PAGE 3: SELECT ANIMAL TYPE -------------------------------->
+
+      <!-- DOM MANIPULATION -->
+
+      <!----------PAGE 4: DISPLAY ARTICLE (top), SAVED SEARCHES (lower left col), THREE IMAGE CARDS (lower right cols)-------------->
+    
+      <!-- <div class="modal" id="modal">
+        <div class="modal-background">
+        </div>
+        <div class="modal-content">
+
+          <div class="column"> -->
+            <!-- article section-->
+            <!-- <p class="bd-notification is-danger">Creature Feature</p>
+            <div class="columns is-mobile">
+              <div class="column is-half">
+                <div class="card" id="some kind of jquery id">
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-left">
+                        <div class="media-content">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+                <!-- saved searches -->
+                <!-- <p class="bd-notification is-danger">You have learned about:</p> -->
+                <!-- <div class="modal"> -->
+                  <!-- <div class="modal-background">
+                  </div>
+
+                  <div class="modal-content">
+                  </div>
+                </div>
+              </div> -->
+              <!-- giphy x3 (CARDS? OPTIONAL)-->
+              <!-- <div class="column">
+                <p class="bd-notification is-info">Here is</p> -->
+                <!-- <div class="modal"> -->
+                  <!-- <div class="modal-background"></div>
+                  <div class="modal-content">
+                    <p class="image is-4by3">
+                      <img src="./assets/images/piranha.jpg" alt="">
+                    </p>
+                  </div>
+                  <div class="column">
+                    <p class="bd-notification is-info">what I</p> -->
+                    <!-- <div class="modal"> -->
+                      <!-- <div class="modal-background"></div>
+                      <div class="modal-content">
+                        <p class="image is-4by3">
+                          <img src="./assets/images/whale-shark.jpg" alt="">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <p class="bd-notification is-info">look like!</p> -->
+                    <!-- <div class="modal"> -->
+                      <!-- <div class="modal-background"></div>
+                      <div class="modal-content">
+                        <p class="image is-4by3">
+                          <img src="./assets/images/blobfish.jpg" alt="">
+                        </p>
+                      </div>
+                    </div>
+                  </div> -->
+                  <!------------------------------- "CLOSE" BUTTON STARTS NEW SEARCH -------------------------------->
+                    <!-- <button class="modal-close is-large has-text-centered mt-6" aria-label="close">
+                        Learn about more animals!
+                    </button>
+                </div>
+              </div> -->
+          <!-- <div class="animal-classifications"> -->
+          <!-- <div class="column">
+            <div class="selectionWrapper">
+              <button class="selectButton is-normal" data-type="klass" data-name="fish">
+                <div class="selectionTitle">
+                  <strong class="is-size-2 has-text-info">Fish<strong>
+                </div>
+                <div class="selectionBG">
+                  <img src="./assets/images/fish.jpg"
+                    alt="school of striped fish, Photo by Francesco Ungaro on Unsplash" />
+                </div>
+              </button>
+            </div> -->
+            <!-- <div class="animal-classifications"> -->
+            <!-- <div class="column">
+              <div class="selectionWrapper">
+                <button class="selectButton is-normal" data-type="klass" data-name="birds">
+                  <div class="selectionTitle">
+                    <strong class="is-size-2 has-text-info">Birds<strong>
+                  </div>
+                  <div class="selectionBG">
+                    <img src="./assets/images/birds.jpg" alt="flock of parrots, Photo by Gareth Davies on Unsplash" />
+                  </div>
+                </button>
+              </div> -->
+              <!-- <div class="animal-classifications"> -->
+                <!-- <div class="block"> -->
+                  <!-- <div class="columns">
+                <div class="column">
+                  <div class="selectionWrapper">
+                    <button class="selectButton is-normal" data-type="klass" data-name="reptiles">
+                      <div class="selectionTitle">
+                        <strong class="is-size-2 has-text-info">Reptiles<strong>
+                      </div>
+                      <div class="selectionBG">
+                        <img src="./assets/images/reptiles.jpg"
+                          alt="Green crested lizard in Singapore, Photo by Mark Stoop on Unsplash" />
+                      </div>
+                    </button>
+                  </div> -->
+                  <!-- <div class="animal-classifications"> -->
+                  <!-- <div class="column">
+                  <div class="selectionWrapper">
+                    <button class="selectButton is-normal" data-type="klass" data-name="insects">
+                      <div class="selectionTitle">
+                        <strong class="is-size-2 has-text-info">Insects<strong>
+                      </div>
+                      <div class="selectionBG">
+                        <img src="./assets/images/insects.jpg"
+                          alt="a red moth on a leaf, The Ruby Tiger, Photo by Erik Karits on UnsplashSome image" />
+                      </div>
+                    </button>
+                  </ul>
+                  </div> -->
+
+                  <!-- BULMA EXAMPLES -->
+                  <!-- <div class="columns">
+                    <div class="column has-text-warning">First column</div>
+                    <div class="column has-text-info">Second column</div>
+                    <div class="column has-text-primary">Third column</div>
+                    <div class="column has-text-danger">Fourth column</div>
+                  </div> -->
+
+                  <!-- <div class="columns">
+                    <div class="column has-text-danger">Fourth column</div>
+                    <div class="column has-text-info">Fifth column</div>
+                  </div> -->
+
+
+                  <!-- <div class="container is-fluid">
+                    <div class="notification is-primary">
+                      This container is <strong>fluid</strong>: it will have a 32px gap on either side, on any
+                      viewport size.
+                    </div>
+                  </div> -->
+
+                  <!-- Main container -->
+<!-- <nav class="level">
+  <div class="level-left">
+    <div class="level-item">
+      <p class="subtitle is-5">
+        <strong>123</strong> posts
+      </p>
+    </div>
+    <div class="level-item">
+      <div class="field has-addons">
+        <p class="control">
+          <input class="input" type="text" placeholder="Find a post">
+        </p>
+        <p class="control">
+          <button class="button">
+            Search
+          </button>
+        </p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Right side -->
+  <!-- <div class="level-right">
+    <p class="level-item"><strong>All</strong></p>
+    <p class="level-item"><a>Published</a></p>
+    <p class="level-item"><a>Drafts</a></p>
+    <p class="level-item"><a>Deleted</a></p>
+    <p class="level-item"><a class="button is-success">New</a></p>
+  </div>
+</nav> -->
+                  <!------------------------------- PAGE 3: SELECT ANIMAL TYPE -------------------------------->
+
+                  <!-- DOM MANIPULATION -->
+
+                  <!----------PAGE 4: DISPLAY ARTICLE (top), SAVED SEARCHES (lower left col), THREE IMAGE CARDS (lower right cols)-------------->
+
+                  <!-- <div class="modal is-medium is-active" id="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                      <div class="column">
+                        article section
+                        <p class="bd-notification is-danger">Creature Feature</p>
+                        <div class="columns is-mobile">
+                          <div class="column is-half">
+                            <div class="card" id="some kind of jquery id">
+                              <div class="card-content">
+                                <div class="media">
+                                  <div class="media-left">
+                                    <div class="media-content">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            saved searches
+                            <p class="bd-notification is-danger">You have learned about:</p>
+                            <div class="modal is-active"> 
+                            <div class="modal-background"></div>
+                            <div class="modal-content" id="savedSearches">
+                            </div>
+                          </div>
+                        </div>
+                        giphy x3 (CARDS? OPTIONAL)
+                        <div class="column">
+                          <p class="bd-notification is-info">Here is</p>
+                          <div class="modal is-active"> 
+                          <div class="modal-background"></div>
+                          <div class="modal-content">
+                            <p class="image is-3by3">
+                              <img src="./assets/images/piranha.jpg" alt="">
+                            </p>
+                          </div>
+                          <div class="column">
+                            <p class="bd-notification is-info">what I</p>
+                            <div class="modal is-active">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                              <p class="image is-3by3">
+                                <img src="./assets/images/whale-shark.jpg" alt="">
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="column">
+                          <p class="bd-notification is-info">look like!</p>
+                          <div class="modal is-active">
+                          <div class="modal-background"></div>
+                          <div class="modal-content">
+                            <p class="image is-3by3">
+                              <img src="./assets/images/blobfish.jpg" alt="">
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      ----------------------------- "CLOSE" BUTTON STARTS NEW SEARCH ------------------------------
+                       <button class="modal-close is-large has-text-centered mt-6" aria-label="close"> -->
+                      <!-- Learn about more animals!</button> --> 
+                    <!-- </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="./assets/js/script.js"></script> -->
