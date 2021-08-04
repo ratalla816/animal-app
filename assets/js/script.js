@@ -198,19 +198,6 @@ var createAnimalList = function(){
            $('.animals2').append(html1);
         }
 
-<<<<<<< HEAD
-var createAnimal = function(){
-    $('.animal').hide();
-    $('<button/>', {
-        id: 'some-id',
-        dataType: 'animal',
-        text: 'ANIMAL NAME HERE',
-        "class": 'some-class',
-    }).appendTo('#content-head');
-
-    
-=======
->>>>>>> feature/jqueryNew
 };
 
 // var html = '<div class="column is-4">' + 
