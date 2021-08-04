@@ -15,7 +15,10 @@ THEN I am able to save the gif and article to view later and I may also choose a
 
 Wiki "http://en.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Zebra&format=json"
  
- Giphy "http://api.giphy.com/v1/gifs/search?q=zebra&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1"
+Giphy "http://api.giphy.com/v1/gifs/search?q=zebra&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1"
+
+Pixabay "https://pixabay.com/api
+
 
 
 
