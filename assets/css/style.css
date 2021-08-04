@@ -1,30 +1,12 @@
 body {
     background-color: khaki;
-    font-family: ui-sans-serif;
-    /* text-shadow: 0px 2px 2px #A4A7A5; */
-    }
-/* 
-img {
-    height: 30%;
-    max-width: 30%;
-    height: 15%;
-    max-width: 15%;
-    border-radius: 25px;
-} */
+    font-family: Helvetica, sans-serif;
+}
 
-/* .selectionWrapper {
-    box is-15-tablet is-20-desktop has-text-centered mt-6
-} */
-/* start addition for jquery */
-/* .classification{
-    display: none;
-} */
-
-/* end of addition for jquery */
-
-/* button:hover{
-    box-shadow: 4px 3px 6px #3b3703;
-  }
+h1{
+    font-size: 36px;
+    font-weight: 800;
+}
 
 .startButton {
     flex-direction: row;
@@ -33,21 +15,7 @@ img {
     border-radius: 25px;
     font-weight: bold;
     text-shadow: 0px 1px 1px #A4A7A5;
-} */
-
-/* .selectButton {
-    flex-direction: row;
-    justify-content: center/space-around;
-    text-align: center;
-    padding-right: .25rem;
-    padding-left: .25rem;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center; 
-    border-radius: 25px;
-    font-weight: bold;
-    text-shadow: 0px 1px 1px #A4A7A5;    
-}  */
+}
 
 /* Selection Classes */
 
@@ -68,20 +36,24 @@ img {
     background-size: cover;
 }
 
-.selectionItem > .selectionTitle {
-    display: flex;
-    position: absolute;
-    z-index: 0;
-    font-size: 36px;
-    color: white;
+.selectionItem.completed {
+    opacity: 0.7;
 }
 
-.selectionItem > .selectionImg {
-    display: flex;
-    position: relative;
-    z-index: 5;
+/* Buttons Classes */
+.btn {
+
 }
 
+.btn-primary {
+
+}
+
+.btn-secondary {
+
+}
+
+/* Modal Classes */
 .modal-content {
     background-color: #ffffff;
 }
@@ -209,91 +181,5 @@ img {
     background-image: url("../images/anaconda.jpg");
 }
 
-
-
-
-
-
-/* .selectButton {
-    padding: .25rem;
-    flex-direction: row; */
-    /* justify-content: center; */
-    /* text-align: center;
-    border-radius: 25px;
-    font-weight: bold;
-    text-shadow: 0px 1px 1px #A4A7A5;    
-} */
-
-/* .selectionWrapper {
-    display: flex; 
-    flex-direction: row;
-    justify-content: center/space-around;
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-    text-shadow: 0px 1px 1px #A4A7A5;
-} */
-
-/* .animal-classifications {
-    display: flex; 
-    flex-direction: column;
-    justify-content: center/space-around;
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-    text-shadow: 0px 1px 1px #A4A7A5;
-} */
-
-/* image card styling  OPTIONAL */
-/* .image-card {
-background-color: chocolate;
-} */
-
-/* Button classes */
-/* .animalType {
-    display: block;
-    flex-direction: column;
-    justify-content: center/space-around;
-    text-align: center;
-    font-weight: bold;
-    text-shadow: 0px 1px 1px #A4A7A5;
-}
-} */
-
-/* .animalSelection {
-    display: block;
-    flex-direction: row;
-    justify-content: center/space-around;
-    text-align: center;
-    font-weight: bold;
-    text-shadow: 0px 1px 1px #A4A7A5;
-}
-} */
-
-/* Data Types */
-/* .animalCompleted {
-    display: block;
-    flex-direction: row;
-    justify-content: center/space-around;
-}
-
-@media (max-width: 690px) {
-} */
-
-/* @media (max-width: 690px) {
-    .btn {
-      font-size: 1rem;
-      margin: 16px 0px 0px 0px;
-      padding: 10px 15px;
-    }
-  
-  }
-  
-  @media (max-width: 500px) {
-    .btn {
-      font-size: 0.8rem;
-    }
-  }
-  } */
 
 

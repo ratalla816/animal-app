@@ -49,32 +49,110 @@ function setAnimals(animalObj) {
 //App Initializer
 async function animalInit(){
 
-    // Get Animals from localStorage
-    var animalObj = getAnimals();
-
-    //Sample Animal Request
-    // var animalData = await getAnimalByAnimalName(animalObj[0].name);
-
-    //Log animalObj and sample animalData
-    // console.log("animalObj:", animalObj, "animalData:", animalData);
+    contentEl = document.getElementById('content');
+    //If height of elements is less than window height, set body height
+    if (window.innerHeight > contentEl.offsetHeight) {
+        //Set Body to window height
+        contentEl.style.height = window.innerHeight + 'px';
+    } 
 }
 
-async function updateModalByAnimalName(animalName) {
+function updateCompletedAnimal(animalName) {
+    var animals = getAnimals();
+
+    for (var i = 0; i< animals.length; i++){
+        if (animals[i].name == animalName) {
+            animals[i].completed = true;
+        }
+    }
+
+    setAnimals(animals);
+}
+
+
+// Renders layout to select animal types
+function renderAnimalTypeOptions() {
+    var animalPrompt = "Which Type of Animal Do You Want to Explore?";
+    var selectionArr = ['mammals', 'fish', 'reptiles', 'insects', 'birds'];
+    var html = "";
+    
+
+    for (var i = 0; i< selectionArr.length; i++){
+        html += '<div class="column is-one-third">';
+        html += '<button class="selectionItem '+selectionArr[i]+'" data-type="klass" data-name="'+selectionArr[i]+'">' + humanize(selectionArr[i]);
+        html += '</button>';
+        html += '</div>';
+    }
+
+    $('#appPrompt').html(animalPrompt);
+    $('#appActions').html(html);
+}
+
+// Renders layout to select animals
+function renderAnimalOptions(klass) {
+    var html = "";
+    var animalsByType = getAnimalsByType(klass);
+
+    for (var i = 0; i < animalsByType.length; i++){
+        var status = "";
+
+        if (animalsByType[i].completed) {
+            status = " completed"
+        }
+
+        html += '<div class="column is-one-third">';
+        html += '<button class="selectionItem '+ animalsByType[i].name + status+ '" data-type="animal" data-name="'+animalsByType[i].name+'">' + humanize(animalsByType[i].name);
+        html += '</button>';
+        html += '</div>';
+    }
+
+    var button = '<div class="column is-full has-text-centered"><button class="backToSelection button is-large">Back To Animal Type</button></div></div>';
+    
+    $('#appActions').html(html+button);
+}
+
+async function renderAnimalModal(animalName) {
     var animal = await getAnimalByAnimalName(animalName);
 
     if (animal) {
-        console.log('updateModalByAnimalName', animalName, animal.wiki, animal.giphy, animal.image);
+        // console.log('updateModalByAnimalName', animalName, animal);
 
         $('#animalTitle').html(humanize(animalName));
         $('#animalWiki').html(animal.wiki);
         $('#animalGiphy').html(animal.giphy);
         $('#animalImg').attr('src', animal.image);
+        $('#completeSelection').attr('data-name', animalName);
 
         $('.modal').show();
     }
 }
 
-//Input animal_name, fetch wiki data, and return text string
+function getAnimalsByType(klass) {
+    var animals = getAnimals();
+    var animalsByType = animals.filter(animalData => {
+            if (animalData.klass == klass) {
+                return animalData;
+            }
+    });
+    return animalsByType ;
+}
+
+// Get separate api data and create single animal object
+async function getAnimalByAnimalName(animal_name) {
+    var wiki = await getWikiByAnimalName(animal_name);
+    var giphy = await getGiphyByAnimalName(animal_name);
+    var image = await getImageByAnimalName(animal_name);
+
+    var animalData = {
+        'wiki': wiki,
+        'giphy': giphy,
+        'image': image
+    };
+    return animalData;
+}
+
+// Sub function called from getAnimalByAnimalName
+// Input animal_name, fetch wiki data, and return text string
 function getWikiByAnimalName(animal_name) {
     var fetchData = fetch("http://en.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=" + animal_name + "&format=json")
     .then((response) => response.json())
@@ -87,7 +165,8 @@ function getWikiByAnimalName(animal_name) {
     return fetchData;
 }
 
-//Input animal_name, fetch giphy data, and return html string
+// Sub function called from getAnimalByAnimalName
+// Input animal_name, fetch giphy data, and return html string
 function getGiphyByAnimalName(animal_name) {
     var fetchData = fetch('http://api.giphy.com/v1/gifs/search?q=' + animal_name + '&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1')
     .then((response) => response.json())
@@ -101,7 +180,8 @@ function getGiphyByAnimalName(animal_name) {
     return fetchData;
 }
 
-//Input animal_name, fetch pixabay data, and return url string
+// Sub function called from getAnimalByAnimalName
+// Input animal_name, fetch pixabay data, and return url string
 function getImageByAnimalName(animal_name) {
     var apiKey = '22691826-3e6bf0771812c9d2424ab24b4';
     var perPage = 200;
@@ -117,58 +197,7 @@ function getImageByAnimalName(animal_name) {
     return fetchData;
 }
 
-//Get separate animal data and create single data object
-async function getAnimalByAnimalName(animal_name) {
-    const wiki = await getWikiByAnimalName(animal_name);
-    const giphy = await getGiphyByAnimalName(animal_name);
-    const image = await getImageByAnimalName(animal_name);
-
-    var animalData = {
-        'wiki': wiki,
-        'giphy': giphy,
-        'image': image
-    };
-    
-    return animalData;
-}
-
-
-$('.startButton').on('click', function() {
-    //hides start page
-    $('.startPage').hide();
-    //shows classification page
-    $('.classification').show();
-    console.log('Start Button was clicked');
-})
-
-
-var createAnimal = function(){
-    $('.animal').hide();
-    $('<button/>', {
-        id: 'some-id',
-        dataType: 'animal',
-        text: 'ANIMAL NAME HERE',
-        "class": 'some-class',
-    }).appendTo('#content-head');
-};
-
-function getAnimalType(type, name = false) {
-    
-    var selection = animalDefaultObj.filter(animalData => {
-        if (type == 'klass') {
-            if (animalData.klass == name) {
-                return animalData;
-            }
-        }  else if (type == 'animal') {
-            if (animalData.name == name) {
-                return animalData;
-            }
-        } 
-    });
-    
-    return selection;
-}
-
+// Utilities
 function humanize(str) {
     //Convert String to Array
     var masterArr = str.split(",");
@@ -187,60 +216,41 @@ function humanize(str) {
     return masterOutput.join(" ");
 }
 
-$('.selectionItem').on('click', async function() {
+
+
+
+// Event Handling
+
+// When the .startButton is clicked
+$('#appActions').on('click', '.startButton', function() {
+    renderAnimalTypeOptions();
+})
+
+//When a .selectionItem is clicked
+$('#appActions').on('click', '.selectionItem', async function(e){
+    
+    //Get data from element
     var selectionType = $(this).data('type');
     var selectionName = $(this).data('name');
 
     if (selectionType == 'klass') {
-        var selectionArr = getAnimalType(selectionType, selectionName);
 
-        //Loop Through Each .selectionItem and update with new selectionArr
-        $('.selectionItem').each(function(i, el){
-        
-            //Remove class name + Add new class name
-            var attr = $(this).attr('class').split(' ');
-            $(el).removeClass(attr[1]).addClass(selectionArr[i].name);
+        //If its an animal type selection, display animals matching that type
+        $('#appActions').html('');
+        renderAnimalOptions(selectionName);
 
-            //Update Data Attributes
-            $(el).data('type', 'animal');
-            $(el).data('name', selectionArr[i].name);
-
-            //Update Button Text
-            $(el).html(humanize(selectionArr[i].name));
-
-            //If Animal is completed, update button with completed class
-            if (selectionArr[i].completed == true) {
-                $(el).addClass('completed');
-            }
-        });
     } else if (selectionType == 'animal') {
-        //Display Modal
-        console.log("modal", selectionName);
-        $('.modal').hide();
-        updateModalByAnimalName(selectionName);
+
+        //If its an animal, display animal in modal
+        console.log('renderAnimalModal', selectionType, selectionName);
+        renderAnimalModal(selectionName);
+
     }
-    
-    
 });
 
-
-$('.backToSelection').on('click', function(e){
-    var selectionArr = ['mammals', 'fish', 'reptiles', 'insects', 'birds'];
-
-    //Loop Through Each .selectionItem and update with new selectionArr
-    $('.selectionItem').each(function(i, el){
-        
-        //Remove current class name + Add new class name
-        var attr = $(this).attr('class').split(' ');
-        $(el).removeClass(attr[1]).addClass(selectionArr[i]);
-
-        //Update Data Attributes
-        $(el).data('type', 'klass');
-        $(el).data('name', selectionArr[i]);
-
-        //Update Button Text
-        $(el).html(selectionArr[i]);
-    });
+//When .backToSelection is clicked;
+$('#appActions').on('click', '.backToSelection', async function(e){
+    renderAnimalTypeOptions();
 })
 
 
@@ -252,22 +262,12 @@ $('#closeSelection').on('click', function() {
         Remove Modal Content from DOM
         Display Current Animal Classifcation Menu
     */
-})
+});
 
-// REPLACE CLASS 
-// $('.completeBtn').on('click', function() {
-
-//     /*
-//         Hide Modal
-//         Set animalObject[animal].completed = "true"
-//         Remove Modal Content from DOM
-//         Display Current Animal Classification Menu
-//     */
-    
-// })
-
-
-
+$('#completeSelection').on('click', function(e) {
+    $('.modal').hide();
+    updateCompletedAnimal($(this).attr('data-name'));
+});
 
 
 /* 
@@ -296,57 +296,57 @@ Format: '&format=json'
 // This test has been most successful in returning usable data from a Wikipedia Page
 // This test is retreiving an article by the Title Zebra, to get a different article we change the value of '&titles='
 
-function apiWikiTest() {
-    fetch("http://en.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Zebra&format=json")
-    .then((response) => response.json())
-    .then(function(data){
+// function apiWikiTest() {
+//     fetch("http://en.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Zebra&format=json")
+//     .then((response) => response.json())
+//     .then(function(data){
 
-        //Getting the first element within the pages object
-        page = data.query.pages[Object.keys(data.query.pages)[0]]
+//         //Getting the first element within the pages object
+//         page = data.query.pages[Object.keys(data.query.pages)[0]]
 
-        //Setting Page Extract To HTML Element
-        $("#wiki-test").html(page.extract);
+//         //Setting Page Extract To HTML Element
+//         $("#wiki-test").html(page.extract);
 
-        //Logging the raw data response
-        console.log("Wikipedia Query Response", data);
+//         //Logging the raw data response
+//         console.log("Wikipedia Query Response", data);
 
         
-    })
-}
+//     })
+// }
 
-function apiGiphyTest() {
-    //API KEY: wrXSrUy02o5zN56E5cFhtNzijtmeWcKe
-    fetch("http://api.giphy.com/v1/gifs/search?q=zebra&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1")
-    .then((response) => response.json())
-    .then(function(data){
+// function apiGiphyTest() {
+//     //API KEY: wrXSrUy02o5zN56E5cFhtNzijtmeWcKe
+//     fetch("http://api.giphy.com/v1/gifs/search?q=zebra&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1")
+//     .then((response) => response.json())
+//     .then(function(data){
         
-        html = '<div style="width:100%;height:0;padding-bottom:56%;position:relative;">';
-        html += '<iframe src="'+data.data[0].embed_url+'" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>';
-        html += '</div>';
+//         html = '<div style="width:100%;height:0;padding-bottom:56%;position:relative;">';
+//         html += '<iframe src="'+data.data[0].embed_url+'" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>';
+//         html += '</div>';
 
-        $("#giphy-test").html(html);
+//         $("#giphy-test").html(html);
 
-        //Logging the raw data response
-        console.log("Giphy Query Response", data);
-    })
-}
+//         //Logging the raw data response
+//         console.log("Giphy Query Response", data);
+//     })
+// }
 
-function apiPixabayTest() {
-    var apiKey = '22691826-3e6bf0771812c9d2424ab24b4';
-    var perPage = 200;
-    fetch('https://pixabay.com/api/?key='+ apiKey +'&image_type=photo&order=popular&per_page=' + perPage + '&q=zebra')
-    .then((response) => response.json())
-    .then(function(data){
+// function apiPixabayTest() {
+//     var apiKey = '22691826-3e6bf0771812c9d2424ab24b4';
+//     var perPage = 200;
+//     fetch('https://pixabay.com/api/?key='+ apiKey +'&image_type=photo&order=popular&per_page=' + perPage + '&q=zebra')
+//     .then((response) => response.json())
+//     .then(function(data){
 
-        //Get First Image From Result
-        var image = data.hits[0].largeImageURL;
-        var imageHTML = '<img src="' + image + '" alt="" height="100"/>';
+//         //Get First Image From Result
+//         var image = data.hits[0].largeImageURL;
+//         var imageHTML = '<img src="' + image + '" alt="" height="100"/>';
 
-        $("#pixabay-test").html(imageHTML);
+//         $("#pixabay-test").html(imageHTML);
 
-        console.log("Pixabay Query Response", data);
-    });
-}
+//         console.log("Pixabay Query Response", data);
+//     });
+// }
 
 animalInit();
 
