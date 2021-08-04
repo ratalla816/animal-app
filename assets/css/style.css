@@ -5,6 +5,7 @@
     } */
 .content{
         margin: 5% auto;
+        
 }
 .container{
     margin: 10% auto;
@@ -22,7 +23,7 @@ img {
     box is-15-tablet is-20-desktop has-text-centered mt-6
 } */
 /* start addition for jquery */
-.classification{
+.classification, .animalsList{
     display: none;
 }
 
