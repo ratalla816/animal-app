@@ -37,6 +37,7 @@ var animalDefaultObj = [
 
 console.log(animalDefaultObj);
 
+//(({ a, c })
 //Get animal object from localStorage
 function getAnimals() {
     var animalObj = JSON.parse(localStorage.getItem('animals')) || animalDefaultObj;
@@ -138,8 +139,6 @@ async function getAnimalByAnimalName(animal_name) {
     return animalData;
 }
 
-// change only works with input,textarea, & select elements
-// some edit
 
 /*
 
@@ -173,16 +172,38 @@ $('.startButton').on('click', function() {
     console.log('Start Button was clicked');
 })
 
+var listLength = 5;
+console.log(animalDefaultObj[0].id);
 
-var createAnimal = function(){
-    $('.animal').hide();
-    $('<button/>', {
-        id: 'some-id',
-        dataType: 'animal',
-        text: 'ANIMAL NAME HERE',
-        "class": 'some-class',
-    }).appendTo('#content-head');
+var createAnimalList = function(){
+    $('.classification').hide();
+    $('.animalsList').show();
+
+        for(var i=0; i<3; i++){
+            var html = '<div class="column is-4">' + 
+               '<button class="button is-large is-rounded is-fullwidth is-primary is-outlined selectionItem" data-type="animal">'
+               + animalDefaultObj[i].name +
+               '</button>' +
+           '</div>';
+
+           $('.animals3').append(html);
+        }
+        for(var i=0; i<2; i++){
+            var html1 = '<div class="column is-6">' + 
+               '<button class="button is-large is-rounded is-fullwidth is-primary is-outlined selectionItem" data-type="animal">'
+               + animalDefaultObj[i].name +
+               '</button>' +
+           '</div>';
+
+           $('.animals2').append(html1);
+        }
+
 };
+
+// var html = '<div class="column is-4">' + 
+//                '<button class="button is-large is-rounded is-fullwidth is-primary is-outlined selectionItem" data-type="animal">'
+//                '</button>' +
+//            '</div>';
 
 /*
     Ive consolidated the animalType and animalSelection class to selectionItem. We need to rewrite
@@ -207,10 +228,17 @@ $('.selectionItem').on('click',function() {
     var dataName = $(this).data('name');
     console.log(dataName);
     
-    if(dataType == 'klass'){
+    //need to make sure it appends the right name to the button
+    if(dataName == 'mammals'){
         console.log('true');
         // 
     }
+    else{
+        console.log('false')
+    }
+
+
+    createAnimalList();
 });
 
 $('.animalSelection').on('click',function() {
