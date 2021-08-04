@@ -1,28 +1,28 @@
 body {
     background-color: khaki;
     font-family: ui-sans-serif;
-    text-shadow: 0px 2px 2px #A4A7A5;
+    /* text-shadow: 0px 2px 2px #A4A7A5; */
     }
-
+/* 
 img {
     /* height: 30%;
     max-width: 30%; */
     height: auto;
     max-width: auto;
     border-radius: 25px;
-}
+} */
 
 /* .selectionWrapper {
     box is-15-tablet is-20-desktop has-text-centered mt-6
 } */
 /* start addition for jquery */
-.classification{
+/* .classification{
     display: none;
-}
+} */
 
 /* end of addition for jquery */
 
-button:hover{
+/* button:hover{
     box-shadow: 4px 3px 6px #3b3703;
   }
 
@@ -34,22 +34,29 @@ button:hover{
     border-radius: 25px;
     font-weight: bold;
     text-shadow: 0px 1px 1px #A4A7A5;
-}
+} */
 
+<<<<<<< HEAD
 .selectButton {
      /* flex-direction: row; */
     /* justify-content: center/space-around; */
+=======
+/* .selectButton {
+    flex-direction: row;
+    justify-content: center/space-around;
+>>>>>>> 6a702964546e76e0269aebd536d47000f1809f22
     text-align: center;
     padding-right: .25rem;
     padding-left: .25rem;
     flex-direction: row;
-    /* justify-content: center; */
+    justify-content: center;
     text-align: center; 
     border-radius: 25px;
     font-weight: bold;
     text-shadow: 0px 1px 1px #A4A7A5;    
-}  
+}  */
 
+<<<<<<< HEAD
 .selectionBG {
     padding-left: .25rem;
     padding-left: .25rem;
@@ -63,10 +70,170 @@ button:hover{
     flex-direction: row;
     /* justify-content: center; */
     /* text-align: center;
+=======
+/* Selection Classes */
+
+.selectionItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    border: none;
+>>>>>>> 6a702964546e76e0269aebd536d47000f1809f22
     border-radius: 25px;
-    font-weight: bold;
-    text-shadow: 0px 1px 1px #A4A7A5;  
-} */ 
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: white;
+    background-position: center;
+    background-size: cover;
+}
+
+.selectionItem > .selectionTitle {
+    display: flex;
+    position: absolute;
+    z-index: 0;
+    font-size: 36px;
+    color: white;
+}
+
+.selectionItem > .selectionImg {
+    display: flex;
+    position: relative;
+    z-index: 5;
+}
+
+.modal-content {
+    background-color: #ffffff;
+}
+
+.modal-content h2{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+/* Background Image Classes */
+
+.selectionItem.mammals {
+    background-image: url("../images/mammals.jpg"); 
+}
+
+.selectionItem.fish {
+    background-image: url("../images/fish.jpg"); 
+}
+
+.selectionItem.insects {
+    background-image: url("../images/insects.jpg"); 
+}
+
+.selectionItem.reptiles {
+    background-image: url("../images/reptiles.jpg"); 
+}
+
+.selectionItem.birds {
+    background-image: url("../images/birds.jpg"); 
+}
+
+.selectionItem.whale {
+    background-image: url("../images/whale.jpg");
+}
+
+.selectionItem.zebra {
+    background-image: url("../images/zebra.jpg");
+}
+
+.selectionItem.platypus {
+    background-image: url("../images/platypus.jpg");
+}
+
+.selectionItem.polar_bear {
+    background-image: url("../images/polar-bear.jpg");
+}
+
+.selectionItem.wombat {
+    background-image: url("../images/wombat.jpg");
+}
+
+.selectionItem.piranha {
+    background-image: url("../images/piranha.jpg");
+}
+
+.selectionItem.whale_shark {
+    background-image: url("../images/whale-shark.jpg");
+}
+
+.selectionItem.jellyfish {
+    background-image: url("../images/jellyfish.jpg");
+}
+
+.selectionItem.blob_fish {
+    background-image: url("../images/blob-fish.jpg");
+}
+
+.selectionItem.angler_fish {
+    background-image: url("../images/angler-fish.jpg");
+}
+
+.selectionItem.ant {
+    background-image: url("../images/ant.jpg");
+}
+
+.selectionItem.stick_bug {
+    background-image: url("../images/stick-bug.jpg");
+}
+
+.selectionItem.firefly {
+    background-image: url("../images/firefly.jpg");
+}
+
+.selectionItem.cockroach {
+    background-image: url("../images/cockroach.jpg");
+}
+
+.selectionItem.praying_mantis {
+    background-image: url("../images/praying-mantis.jpg");
+}
+
+.selectionItem.hummingbird {
+    background-image: url("../images/hummingbird.jpg");
+}
+.selectionItem.golden_eagle {
+    background-image: url("../images/golden_eagle.jpg");
+}
+.selectionItem.toucan {
+    background-image: url("../images/toucan.jpg");
+}
+.selectionItem.pink_flamingo {
+    background-image: url("../images/pink-flamingo.jpg");
+}
+.selectionItem.ostrich {
+    background-image: url("../images/ostrich.jpg");
+}
+
+.selectionItem.komodo_dragon {
+    background-image: url("../images/komodo-dragon.jpg");
+}
+.selectionItem.king_cobra {
+    background-image: url("../images/king-cobra.jpg");
+}
+.selectionItem.crocodile {
+    background-image: url("../images/crocodile.jpg");
+}
+.selectionItem.tortoise {
+    background-image: url("../images/tortoise.jpg");
+}
+.selectionItem.anaconda {
+    background-image: url("../images/anaconda.jpg");
+}
+
+
+
 
 
 
@@ -101,9 +268,9 @@ button:hover{
 } */
 
 /* image card styling  OPTIONAL */
-.image-card {
+/* .image-card {
 background-color: chocolate;
-}
+} */
 
 /* Button classes */
 /* .animalType {
