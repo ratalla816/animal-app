@@ -216,14 +216,6 @@ function humanize(str) {
     return masterOutput.join(" ");
 }
 
-<<<<<<< HEAD
-=======
-
-/*
->>>>>>> ec18d33114c16f0214b3b9d8092e00954deaa141
-
-
-
 // Event Handling
 
 // When the .startButton is clicked
