@@ -173,37 +173,55 @@ $('.startButton').on('click', function() {
 })
 
 var listLength = 5;
-console.log(animalDefaultObj[0].id);
+console.log(animalDefaultObj[0].name);
 
-var createAnimalList = function(){
+var createAnimalList = function(range1, range2){
     $('.classification').hide();
     $('.animalsList').show();
-
-        for(var i=0; i<3; i++){
+    //var name = animalDefaultObj[0].name
+        for(var i=range1; i<range1+3; i++){
             var html = '<div class="column is-4">' + 
-               '<button class="button is-large is-rounded is-fullwidth is-primary is-outlined selectionItem" data-type="animal">'
-               + animalDefaultObj[i].name +
-               '</button>' +
-           '</div>';
-
+               '<button class="button is-large is-rounded is-fullwidth is-primary is-outlined item" data-type="animal" data-name=>'
+                + animalDefaultObj[i].name +
+               '</button>' + '</div>';
+            
            $('.animals3').append(html);
-        }
-        for(var i=0; i<2; i++){
+           //console.log($('.item').data('name'));
+           
+        };
+   
+           //$('.animals3').append(html);
+           // adds data attribute but need to verify if it works
+           // $('.animals3').find('.item').data('name',animalDefaultObj[i].name);
+           // console.log($('.item').data('name'));
+
+           //attempt
+        //    for(var i=range1; i<range1+3; i++){
+        //     $('<div></div>',{
+        //         "class": 'column is-4 titleAnimal'
+        //     }).appendTo('.animals3');
+        // };
+    //     for(var i=range1; i<; i++){
+    //     $('<button/>', {
+    //         id: 'some-id',
+    //         dataType: 'klass',
+    //         text: animalDefaultObj[i].name,
+    //         "class": 'button is-large is-rounded is-fullwidth is-primary is-outlined item',
+    //     }).appendTo('.titleAnimal');
+    // }
+
+        for(var i=range2; i<range2+2; i++){
             var html1 = '<div class="column is-6">' + 
-               '<button class="button is-large is-rounded is-fullwidth is-primary is-outlined selectionItem" data-type="animal">'
+               '<button class="button is-large is-rounded is-fullwidth is-primary is-outlined item" data-type="animal" data-name="${animalDefaultObj[i].name}">'
                + animalDefaultObj[i].name +
                '</button>' +
            '</div>';
-
            $('.animals2').append(html1);
-        }
+        };
+      
 
 };
 
-// var html = '<div class="column is-4">' + 
-//                '<button class="button is-large is-rounded is-fullwidth is-primary is-outlined selectionItem" data-type="animal">'
-//                '</button>' +
-//            '</div>';
 
 /*
     Ive consolidated the animalType and animalSelection class to selectionItem. We need to rewrite
@@ -228,20 +246,34 @@ $('.selectionItem').on('click',function() {
     var dataName = $(this).data('name');
     console.log(dataName);
     
-    //need to make sure it appends the right name to the button
-    if(dataName == 'mammals'){
-        console.log('true');
-        // 
+    //conditional statement takes to change the paremeter of the createAnimalList func
+    if(dataName == 'mammals') {
+        var range1 = 0, range2 = 3;
+    }else if(dataName == 'fishes') {
+        var range1 = 5, range2 = 8;
     }
-    else{
-        console.log('false')
+    else if(dataName == 'insects') {
+        var range1 = 10, range2 = 13;
+    }
+    else if(dataName == 'birds') {
+        var range1 = 15, range2 = 18;
+    }
+    else if(dataName == 'reptiles') {
+        var range1 = 20, range2 = 23;
     }
 
-
-    createAnimalList();
+    createAnimalList(range1, range2);
 });
 
-$('.animalSelection').on('click',function() {
+// click on animal selection
+$(document.body).on('click', '.item', function() {
+    $(this).data('name',$(this).text());
+    console.log($(this));
+    console.log($(this).data('name'));
+    console.log('animal name clicked');
+    console.log($(this).text());
+
+
     //alert('second button was clicked');
     // call function for api here to display information about specific animal
     // redirects to modal page
@@ -250,6 +282,7 @@ $('.animalSelection').on('click',function() {
     // interacts with api
     // use logic to fire up modal
 });
+
 
 // REPLACE CLASS 
 $('.closeBtn').on('click', function() {
