@@ -4,11 +4,11 @@ Object & Persistence
 
 var animalDefaultObj = [
     //Mammals
-    {id: 0, klass: 'mammal', name: 'whale', completed: false },
-    {id: 1, klass: 'mammal', name: 'zebra', completed: false },
-    {id: 2, klass: 'mammal', name: 'platypus', completed: false },
-    {id: 3, klass: 'mammal', name: 'polar_bear', completed: false },
-    {id: 4, klass: 'mammal', name: 'wombat', completed: false },
+    {id: 0, klass: 'mammals', name: 'whale', completed: false },
+    {id: 1, klass: 'mammals', name: 'zebra', completed: false },
+    {id: 2, klass: 'mammals', name: 'platypus', completed: false },
+    {id: 3, klass: 'mammals', name: 'polar_bear', completed: false },
+    {id: 4, klass: 'mammals', name: 'wombat', completed: false },
     //Fish
     {id: 5, klass: 'fish', name: 'piranha', completed: false },
     {id: 6, klass: 'fish', name: 'whale_shark', completed: false },
@@ -16,26 +16,24 @@ var animalDefaultObj = [
     {id: 8, klass: 'fish', name: 'blob_fish', completed: false },
     {id: 9, klass: 'fish', name: 'anglerfish', completed: false },
     //Insects
-    {id: 10, klass: 'insect', name: 'ant', completed: false },
-    {id: 11, klass: 'insect', name: 'stick_bug', completed: false },
-    {id: 12, klass: 'insect', name: 'firefly', completed: false },
-    {id: 13, klass: 'insect', name: 'cockroach', completed: false },
-    {id: 14, klass: 'insect', name: 'praying_mantis', completed: false },
+    {id: 10, klass: 'insects', name: 'ant', completed: false },
+    {id: 11, klass: 'insects', name: 'stick_bug', completed: false },
+    {id: 12, klass: 'insects', name: 'firefly', completed: false },
+    {id: 13, klass: 'insects', name: 'cockroach', completed: false },
+    {id: 14, klass: 'insects', name: 'praying_mantis', completed: false },
     //Birds
-    {id: 15, klass: 'bird', name: 'hummingbird', completed: false },
-    {id: 16, klass: 'bird', name: 'golden_eagle', completed: false },
-    {id: 17, klass: 'bird', name: 'toucan', completed: false },
-    {id: 18, klass: 'bird', name: 'pink_flamingo', completed: false },
-    {id: 19, klass: 'bird', name: 'ostrich', completed: false },
+    {id: 15, klass: 'birds', name: 'hummingbird', completed: false },
+    {id: 16, klass: 'birds', name: 'golden_eagle', completed: false },
+    {id: 17, klass: 'birds', name: 'toucan', completed: false },
+    {id: 18, klass: 'birds', name: 'pink_flamingo', completed: false },
+    {id: 19, klass: 'birds', name: 'ostrich', completed: false },
     //Reptiles
-    {id: 20, klass: 'reptile', name: 'komodo_dragon', completed: false },
-    {id: 21, klass: 'reptile', name: 'king_cobra', completed: false },
-    {id: 22, klass: 'reptile', name: 'crocodile', completed: false },
-    {id: 23, klass: 'reptile', name: 'tortoise', completed: false },
-    {id: 24, klass: 'reptile', name: 'anaconda', completed: false },
+    {id: 20, klass: 'reptiles', name: 'komodo_dragon', completed: false },
+    {id: 21, klass: 'reptiles', name: 'king_cobra', completed: false },
+    {id: 22, klass: 'reptiles', name: 'crocodile', completed: false },
+    {id: 23, klass: 'reptiles', name: 'tortoise', completed: false },
+    {id: 24, klass: 'reptiles', name: 'anaconda', completed: false },
 ];
-
-console.log(animalDefaultObj);
 
 //Get animal object from localStorage
 function getAnimals() {
@@ -51,33 +49,29 @@ function setAnimals(animalObj) {
 //App Initializer
 async function animalInit(){
 
-    //Get Animals from localStorage
+    // Get Animals from localStorage
     var animalObj = getAnimals();
 
     //Sample Animal Request
-    var animalData = await getAnimalByAnimalName(animalObj[0].name);
-
-    //Test Adding to HTML
-    contentTest(animalData);
+    // var animalData = await getAnimalByAnimalName(animalObj[0].name);
 
     //Log animalObj and sample animalData
-    console.log("animalObj:", animalObj, "animalData:", animalData);
+    // console.log("animalObj:", animalObj, "animalData:", animalData);
 }
 
-//Test to parse animalData and display on frontend
-//Not needed in final submission
-function contentTest(animalData){
-    var wiki = animalData.wiki;
-    var giphy = animalData.giphy;
-    var image = animalData.image;
-    
-    var html = "<div>";
-        html += "<p>" + wiki + "</p";
-        html += giphy;
-        html += "<img src=" + image + "alt= />";
-        html += "</div>";
-    
-    $('#content-test').html(html);
+async function updateModalByAnimalName(animalName) {
+    var animal = await getAnimalByAnimalName(animalName);
+
+    if (animal) {
+        console.log('updateModalByAnimalName', animalName, animal.wiki, animal.giphy, animal.image);
+
+        $('#animalTitle').html(humanize(animalName));
+        $('#animalWiki').html(animal.wiki);
+        $('#animalGiphy').html(animal.giphy);
+        $('#animalImg').attr('src', animal.image);
+
+        $('.modal').show();
+    }
 }
 
 //Input animal_name, fetch wiki data, and return text string
@@ -95,7 +89,7 @@ function getWikiByAnimalName(animal_name) {
 
 //Input animal_name, fetch giphy data, and return html string
 function getGiphyByAnimalName(animal_name) {
-    var fetchData = fetch("http://api.giphy.com/v1/gifs/search?q=zebra&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1")
+    var fetchData = fetch('http://api.giphy.com/v1/gifs/search?q=' + animal_name + '&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1')
     .then((response) => response.json())
     .then(function(data){
         
@@ -111,7 +105,7 @@ function getGiphyByAnimalName(animal_name) {
 function getImageByAnimalName(animal_name) {
     var apiKey = '22691826-3e6bf0771812c9d2424ab24b4';
     var perPage = 200;
-    var fetchData = fetch('https://pixabay.com/api/?key='+ apiKey +'&image_type=photo&order=popular&per_page=' + perPage + '&q=zebra')
+    var fetchData = fetch('https://pixabay.com/api/?key='+ apiKey +'&image_type=photo&order=popular&per_page=' + perPage + '&q=' + animal_name)
     .then((response) => response.json())
     .then(function(data){
 
@@ -138,32 +132,6 @@ async function getAnimalByAnimalName(animal_name) {
     return animalData;
 }
 
-// change only works with input,textarea, & select elements
-// some edit
-
-/*
-
-    * The HTML for a selection now looks like the below. When the ".selectionItem" gets clicked, 
-    * we need to get the data attributes and use them to display the correct selection.
-    
-    <div class="selectionWrapper">
-        <button class="selectionItem" data-type="" data-name="">
-            <div class="selectionTitle">
-                Lorem Ipsum
-            </div>
-            <div class="selectionBG">
-                <img src="#" alt="Some image" />
-            </div>
-        </button>
-    </div>
-
-    * data-type is either "klass" or "animal". 
-        o If the button is for a classification, data-type="klass". 
-        o If the button is for an animal, data-type="animal"
-    * data-name is either the name of the classification or the animal name
-
-*/
-
 
 $('.startButton').on('click', function() {
     //hides start page
@@ -184,47 +152,101 @@ var createAnimal = function(){
     }).appendTo('#content-head');
 };
 
-/*
-    Ive consolidated the animalType and animalSelection class to selectionItem. We need to rewrite
-    an event handler to listen for clicks on ".selectionItem"
+function getAnimalType(type, name = false) {
     
-    After being clicked, we need to get the "data-type" and "data-name" attributes from the ".selectionItem"
-    DOM Element
-        If the data-type="klass",
-            Get animals with data-type="klass_name"
-            Update HTML with selection animal classification
-        If the data-type="animal"
-            Get animalData
-            Set animalData within Modal HTML
-            Trigger Modal
-*/
-
-$('.selectionItem').on('click',function() {
-    console.log('class clicked');
-
-    var dataType = $(this).data('type');
-    console.log(dataType);
-    var dataName = $(this).data('name');
-    console.log(dataName);
+    var selection = animalDefaultObj.filter(animalData => {
+        if (type == 'klass') {
+            if (animalData.klass == name) {
+                return animalData;
+            }
+        }  else if (type == 'animal') {
+            if (animalData.name == name) {
+                return animalData;
+            }
+        } 
+    });
     
-    if(dataType == 'klass'){
-        console.log('true');
-        // 
+    return selection;
+}
+
+function humanize(str) {
+    //Convert String to Array
+    var masterArr = str.split(",");
+    var masterOutput = [];
+
+    for(let i = 0; i < masterArr.length; i++) {
+        var subStr = masterArr[i].split("_");
+        var subOutput = [];
+        for(let i = 0; i < subStr.length; i++) {
+            var subCaps = subStr[i].charAt(0).toUpperCase() + subStr[i].slice(1);
+            subOutput.push(subCaps);
+        }
+        masterOutput.push(subOutput.join(" "));
     }
+
+    return masterOutput.join(" ");
+}
+
+$('.selectionItem').on('click', async function() {
+    var selectionType = $(this).data('type');
+    var selectionName = $(this).data('name');
+
+    if (selectionType == 'klass') {
+        var selectionArr = getAnimalType(selectionType, selectionName);
+
+        //Loop Through Each .selectionItem and update with new selectionArr
+        $('.selectionItem').each(function(i, el){
+        
+            //Remove class name + Add new class name
+            var attr = $(this).attr('class').split(' ');
+            $(el).removeClass(attr[1]).addClass(selectionArr[i].name);
+
+            //Update Data Attributes
+            $(el).data('type', 'animal');
+            $(el).data('name', selectionArr[i].name);
+
+            //Update Button Text
+            $(el).html(humanize(selectionArr[i].name));
+
+            //If Animal is completed, update button with completed class
+            if (selectionArr[i].completed == true) {
+                $(el).addClass('completed');
+            }
+        });
+    } else if (selectionType == 'animal') {
+        //Display Modal
+        console.log("modal", selectionName);
+        $('.modal').hide();
+        updateModalByAnimalName(selectionName);
+    }
+    
+    
 });
 
-$('.animalSelection').on('click',function() {
-    //alert('second button was clicked');
-    // call function for api here to display information about specific animal
-    // redirects to modal page
 
-    // show information base on which actuall animal is clicked
-    // interacts with api
-    // use logic to fire up modal
-});
+$('.backToSelection').on('click', function(e){
+    var selectionArr = ['mammals', 'fish', 'reptiles', 'insects', 'birds'];
+
+    //Loop Through Each .selectionItem and update with new selectionArr
+    $('.selectionItem').each(function(i, el){
+        
+        //Remove current class name + Add new class name
+        var attr = $(this).attr('class').split(' ');
+        $(el).removeClass(attr[1]).addClass(selectionArr[i]);
+
+        //Update Data Attributes
+        $(el).data('type', 'klass');
+        $(el).data('name', selectionArr[i]);
+
+        //Update Button Text
+        $(el).html(selectionArr[i]);
+    });
+})
+
 
 // REPLACE CLASS 
-$('.closeBtn').on('click', function() {
+$('#closeSelection').on('click', function() {
+    $('.modal').hide();
     /*
         Hide Modal
         Remove Modal Content from DOM
@@ -233,26 +255,20 @@ $('.closeBtn').on('click', function() {
 })
 
 // REPLACE CLASS 
-$('.completeBtn').on('click', function() {
+// $('.completeBtn').on('click', function() {
 
-    /*
-        Hide Modal
-        Set animalObject[animal].completed = "true"
-        Remove Modal Content from DOM
-        Display Current Animal Classification Menu
-    */
+//     /*
+//         Hide Modal
+//         Set animalObject[animal].completed = "true"
+//         Remove Modal Content from DOM
+//         Display Current Animal Classification Menu
+//     */
     
-})
+// })
 
-/*
-    We need to create an event handler for when "#selectionBack" is clicked, we update the HTML with
-    the animal selection menu.
 
-    - Remove animal selection HTML from DOM
-    - Add animal classification HTML to DOM
-*/
 
-animalInit();
+
 
 /* 
 Basic Wikipedia API Notes
@@ -321,8 +337,6 @@ function apiPixabayTest() {
     fetch('https://pixabay.com/api/?key='+ apiKey +'&image_type=photo&order=popular&per_page=' + perPage + '&q=zebra')
     .then((response) => response.json())
     .then(function(data){
-        // var random = Math.floor(Math.random() * data.hits.length);
-        // var image = data.hits[random].pageURL;
 
         //Get First Image From Result
         var image = data.hits[0].largeImageURL;
@@ -335,10 +349,4 @@ function apiPixabayTest() {
 }
 
 animalInit();
-// apiWikiTest();
-// apiGiphyTest();
-// apiPixabayTest();
-// change only works with input,textarea, & select elements
-// some edit
-
 
