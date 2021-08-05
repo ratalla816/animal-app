@@ -26,10 +26,14 @@ h1{
     color: white;
     background-position: center;
     background-size: cover;
+    cursor: pointer;
+    cursor: auto;
 }
 
 .selectionItem.completed {
     opacity: 0.7;
+    cursor: pointer;
+    cursor: auto;
 }
 
 /* Buttons Classes */
