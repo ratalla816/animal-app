@@ -2,79 +2,36 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Animal Explorer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Animal Explorer</title>
 </head>
-
-<body>
-  <!------------------------------- START PAGE -------------------------------->
-  <div class="startPage" id="content"></div>
-
-  <div class="column is-15-tablet is-20-desktop has-text-centered mt-6 has-background-danger" id="content-head">
-    <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
-      <div class="column is-15-tablet is-20-desktop has-text-centered">
-        <p= has-text-danger>
-          <strong class="is-size-1 has-text-light has-background-danger">Lets see some animals!<strong>
-              </p>
-      </div>
-    </div>
-  </div>
-  <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
-    <button class="startButton is-size-1 has-background-info has-text-light">Start</button>
-    </a>
-  </div>
-  </div>
-
-  <!------------------------------- PAGE 2: SELECT ANIMAL CLASSIFICATION -------------------------------->
-  <div class="classification"></div>
-  <div class="column is-15-tablet is-20-desktop has-text-centered mt-6">
-    <div class="column is-15-tablet is-20-desktop has-text-centered">
-      <p= has-text-danger>
-        <strong class="is-size-1 has-text-danger">Pick an animal classification!<strong>
-            </p>
-            <p= has-text-danger>
-              <strong class="is-size-1 has-text-danger">Some are cute. Some are creepy. Some are BIG. Some are small..
-                You will love them ALL!<strong>
-                  </p>
-    </div>
-  </div>
-   <div class="" id="content-head">
-    <div class="box is-5-tablet is-10-desktop has-text-centered mt-6">
-      <div class="is-primary">
-        <ul>
-          <!-- <div class="animal-classifications">  -->
-            <!-- <div class="block"> -->
-           <div class="columns">
-          <div class="column">
-          <div class="selectionWrapper">
-            <!-- <button class="selectButton" data-type="klass" data-name="mammals"> -->
-              <!-- <div class="selectionTitle"> -->
-                <!-- <strong class="is-size-2 has-text-info">Mammals<strong> -->
-                  <a href="#", id="selectButton">Mammals</a>
-              </div>
-              <div class="selectionBG">
-                <img src="./assets/images/mammal.jpg"
-                  alt="Red Fox, Wildlife in Winter Photo by Ray Hennessy on Unsplash" />
-              </div>
-            </button>
-          </div>
-          <!-- <div class="animal-classifications"> -->
-          <div class="column">
-            <div class="selectionWrapper">
-              <!-- <button class="selectButton" data-type="klass" data-name="fish">
-                <div class="selectionTitle">
-                  <strong class="is-size-2 has-text-info">Fish<strong> -->
-                    <a href="#", id="selectButton">Fish</a>
-                </div>
-                <div class="selectionBG">
-                  <img src="./assets/images/fish.jpg"
-                    alt="school of striped fish, Photo by Francesco Ungaro on Unsplash" />
-                </div>
-              </button>
+<body id="content">
+    <div class="container">
+        <div class="columns">
+            <div class="column has-text-centered">
+                <h1 id="appPrompt">Welcome to Animal Explorer</h1>
             </div>
+        </div>
+        <div class="columns is-multiline is-centered" id="appActions">
+            <div class="column has-text-centered">
+                <button class="startButton button is-large">Explore!</button>
+            </div>
+    </div>
+    
+    <!-- Modal Start -->
+    <div class="modal" id="modal">
+        <div class="modal-background">
+        </div>
+        <div class="modal-content">
+            <div class="modal-image">
+                <img id="animalImg" src="" alt=""/>
+                <button class="button is-large" id="completeSelection" data-name="">Completed</button>
+            </div>
+<<<<<<< HEAD
             <!-- <div class="animal-classifications"> -->
             <div class="column">
               <div class="selectionWrapper">
@@ -136,149 +93,30 @@
                     <div class="notification is-primary">
                       This container is <strong>fluid</strong>: it will have a 32px gap on either side, on any
                       viewport size.
+=======
+            <div class="modal-body">
+                <div class="columns">
+                    <div class="column">
+                        <h2 id="animalTitle"></h2>
+                        <p id="animalWiki"></p>
+>>>>>>> 2266b959e216567740ad138e83ad389e1efb9fd3
                     </div>
-                  </div>
-
-                  Main container
-<nav class="level">
-  Left side
-  <div class="level-left">
-    <div class="level-item">
-      <p class="subtitle is-5">
-        <strong>123</strong> posts
-      </p>
-    </div>
-    <div class="level-item">
-      <div class="field has-addons">
-        <p class="control">
-          <input class="input" type="text" placeholder="Find a post">
-        </p>
-        <p class="control">
-          <button class="button">
-            Search
-          </button>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  Right side
-  <div class="level-right">
-    <p class="level-item"><strong>All</strong></p>
-    <p class="level-item"><a>Published</a></p>
-    <p class="level-item"><a>Drafts</a></p>
-    <p class="level-item"><a>Deleted</a></p>
-    <p class="level-item"><a class="button is-success">New</a></p>
-  </div>
-</nav> -->
-                  <!------------------------------- PAGE 3: SELECT ANIMAL TYPE -------------------------------->
-
-                  <!-- DOM MANIPULATION -->
-
-                  <!----------PAGE 4: DISPLAY ARTICLE (top), SAVED SEARCHES (lower left col), THREE IMAGE CARDS (lower right cols)-------------->
-
-                  <!-- <div class="modal is-medium is-active" id="modal">
-                    <div class="modal-background"></div>
-                    <div class="modal-content">
-                      <div class="column">
-                        article section
-                        <p class="bd-notification is-danger">Creature Feature</p>
-                        <div class="columns is-mobile">
-                          <div class="column is-half">
-                            <div class="card" id="some kind of jquery id">
-                              <div class="card-content">
-                                <div class="media">
-                                  <div class="media-left">
-                                    <div class="media-content">
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            saved searches
-                            <p class="bd-notification is-danger">You have learned about:</p>
-                            <div class="modal is-active"> 
-                            <div class="modal-background"></div>
-                            <div class="modal-content" id="savedSearches">
-                            </div>
-                          </div>
-                        </div>
-                        giphy x3 (CARDS? OPTIONAL)
-                        <div class="column">
-                          <p class="bd-notification is-info">Here is</p>
-                          <div class="modal is-active"> 
-                          <div class="modal-background"></div>
-                          <div class="modal-content">
-                            <p class="image is-3by3">
-                              <img src="./assets/images/piranha.jpg" alt="">
-                            </p>
-                          </div>
-                          <div class="column">
-                            <p class="bd-notification is-info">what I</p>
-                            <div class="modal is-active">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                              <p class="image is-3by3">
-                                <img src="./assets/images/whale-shark.jpg" alt="">
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="column">
-                          <p class="bd-notification is-info">look like!</p>
-                          <div class="modal is-active">
-                          <div class="modal-background"></div>
-                          <div class="modal-content">
-                            <p class="image is-3by3">
-                              <img src="./assets/images/blobfish.jpg" alt="">
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      ----------------------------- "CLOSE" BUTTON STARTS NEW SEARCH ------------------------------
-                       <button class="modal-close is-large has-text-centered mt-6" aria-label="close"> -->
-                      <!-- Learn about more animals!</button> --> 
-                    <!-- </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-          </div> -->
+                <div class="columns">
+                    <div class="column">
+                        <h3>Fun Gifs!</h3>
+                        <div id="animalGiphy"></div>
+                    </div>v
+                </div>
+              </div>            
+        </div>
+        <button class="modal-close is-large" aria-label="close" id="closeSelection"></button>
+    </div>
+    <!-- Modal End -->
+ 
 
-          <script src="./assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
-
-<!-- we COULD use a navbar to access saved searches -->
-<!-- <nav class="navbar">
-    <div class="container">
-      <div id="navMenu" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-            Home
-          </a>
-          <a class="navbar-item">
-            Documentation
-          </a>
-        </div>
-  
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-dark">Github</a>
-              <a class="button is-link">Download</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-  
-  <section class="hero is-link is-fullheight-with-navbar">
-    <div class="hero-body">
-      <p class="title">
-        Fullheight hero with navbar
-      </p>
-    </div>
-  </section> -->
