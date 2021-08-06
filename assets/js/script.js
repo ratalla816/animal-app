@@ -267,6 +267,7 @@ $('.selectionItem').on('click',function() {
 
 // click on animal selection
 $(document.body).on('click', '.item', function() {
+    //adds data-name attribute based on which animal is clicked
     $(this).data('name',$(this).text());
     console.log($(this));
     console.log($(this).data('name'));
@@ -274,9 +275,7 @@ $(document.body).on('click', '.item', function() {
     console.log($(this).text());
 
 
-    //alert('second button was clicked');
-    // call function for api here to display information about specific animal
-    // redirects to modal page
+   
 
     // show information base on which actuall animal is clicked
     // interacts with api
