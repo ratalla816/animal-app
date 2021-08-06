@@ -3,9 +3,13 @@ body {
     font-family: Helvetica, sans-serif;
 }
 
+
 h1{
     font-size: 36px;
     font-weight: 800;
+    cursor: pointer;
+    cursor: auto;
+    margin-bottom: 10%;
 }
 
 
@@ -15,19 +19,18 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 200px;
     width: 100%;
     overflow: hidden;
     border: none;
     border-radius: 25px;
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 800;
     letter-spacing: 2px;
     color: white;
     background-position: center;
     background-size: cover;
     cursor: pointer;
-    cursor: auto;
 }
 
 .selectionItem.completed {
@@ -37,141 +40,166 @@ h1{
 }
 
 /* Buttons Classes */
-.btn {
 
-}
-
-.btn-primary {
-
-}
-
-.btn-secondary {
-
-}
 
 /* Modal Classes */
 .modal-content {
     background-color: #ffffff;
+    cursor: pointer;
+    cursor: auto;
 }
 
 .modal-content h2{
     font-size: 36px;
     font-weight: 600;
+    cursor: pointer;
+    cursor: auto;
 }
 
 .modal-body {
     padding: 20px;
+    cursor: pointer;
+    cursor: auto;
 }
 
 /* Background Image Classes */
 
 .selectionItem.mammals {
     background-image: url("../images/mammals.jpg"); 
+    
 }
 
 .selectionItem.fish {
     background-image: url("../images/fish.jpg"); 
+   
 }
 
 .selectionItem.insects {
     background-image: url("../images/insects.jpg"); 
+   
 }
 
 .selectionItem.reptiles {
     background-image: url("../images/reptiles.jpg"); 
+  
 }
 
 .selectionItem.birds {
     background-image: url("../images/birds.jpg"); 
+    
 }
 
 .selectionItem.whale {
     background-image: url("../images/whale.jpg");
+    
 }
 
 .selectionItem.zebra {
     background-image: url("../images/zebra.jpg");
+ 
 }
 
 .selectionItem.platypus {
     background-image: url("../images/platypus.jpg");
+   
 }
 
 .selectionItem.polar_bear {
     background-image: url("../images/polar-bear.jpg");
+    
 }
 
 .selectionItem.wombat {
     background-image: url("../images/wombat.jpg");
+  
 }
 
 .selectionItem.piranha {
     background-image: url("../images/piranha.jpg");
+   
 }
 
 .selectionItem.whale_shark {
     background-image: url("../images/whale-shark.jpg");
+   
 }
 
 .selectionItem.jellyfish {
     background-image: url("../images/jellyfish.jpg");
+   
 }
 
 .selectionItem.blob_fish {
     background-image: url("../images/blob-fish.jpg");
+    
 }
 
-.selectionItem.angler_fish {
+.selectionItem.anglerfish {
     background-image: url("../images/angler-fish.jpg");
+   
 }
 
 .selectionItem.ant {
     background-image: url("../images/ant.jpg");
+   
 }
 
 .selectionItem.stick_bug {
-    background-image: url("../images/stick-bug.jpg");
+    background-image: url("../images/stickbug.jpg");
+    
 }
 
 .selectionItem.firefly {
     background-image: url("../images/firefly.jpg");
+    
 }
 
 .selectionItem.cockroach {
     background-image: url("../images/cockroach.jpg");
+   
 }
 
 .selectionItem.praying_mantis {
     background-image: url("../images/praying-mantis.jpg");
+   
 }
 
 .selectionItem.hummingbird {
     background-image: url("../images/hummingbird.jpg");
+    
 }
 .selectionItem.golden_eagle {
-    background-image: url("../images/golden_eagle.jpg");
+    background-image: url("../images/golden-eagle.jpg");
+  
 }
 .selectionItem.toucan {
     background-image: url("../images/toucan.jpg");
+   
 }
 .selectionItem.pink_flamingo {
-    background-image: url("../images/pink-flamingo.jpg");
+    background-image: url("../images/flamingo.jpg");
+    
 }
 .selectionItem.ostrich {
     background-image: url("../images/ostrich.jpg");
+    
 }
 
 .selectionItem.komodo_dragon {
     background-image: url("../images/komodo-dragon.jpg");
+   
 }
 .selectionItem.king_cobra {
     background-image: url("../images/king-cobra.jpg");
+     
 }
 .selectionItem.crocodile {
     background-image: url("../images/crocodile.jpg");
+    
 }
 .selectionItem.tortoise {
-    background-image: url("../images/tortoise.jpg");
+    background-image: url("../images/galapogos-tortoise.jpg");
+    
 }
 .selectionItem.anaconda {
     background-image: url("../images/anaconda.jpg");
