@@ -9,7 +9,6 @@ h1{
     font-weight: 800;
     cursor: pointer;
     cursor: auto;
-    margin-bottom: 10%;
 }
 
 
@@ -19,12 +18,12 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 300px;
     width: 100%;
     overflow: hidden;
     border: none;
     border-radius: 25px;
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 800;
     letter-spacing: 2px;
     color: white;
@@ -138,7 +137,7 @@ h1{
     
 }
 
-.selectionItem.anglerfish {
+.selectionItem.angler_fish {
     background-image: url("../images/angler-fish.jpg");
    
 }
@@ -149,7 +148,7 @@ h1{
 }
 
 .selectionItem.stick_bug {
-    background-image: url("../images/stickbug.jpg");
+    background-image: url("../images/stick-bug.jpg");
     
 }
 
@@ -173,7 +172,7 @@ h1{
     
 }
 .selectionItem.golden_eagle {
-    background-image: url("../images/golden-eagle.jpg");
+    background-image: url("../images/golden_eagle.jpg");
   
 }
 .selectionItem.toucan {
@@ -181,7 +180,7 @@ h1{
    
 }
 .selectionItem.pink_flamingo {
-    background-image: url("../images/flamingo.jpg");
+    background-image: url("../images/pink-flamingo.jpg");
     
 }
 .selectionItem.ostrich {
@@ -202,7 +201,7 @@ h1{
     
 }
 .selectionItem.tortoise {
-    background-image: url("../images/galapogos-tortoise.jpg");
+    background-image: url("../images/tortoise.jpg");
     
 }
 .selectionItem.anaconda {
