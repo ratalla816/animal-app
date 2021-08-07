@@ -4,14 +4,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Animal Explorer</title>
 </head>
-<body>
-    <div class="columns">
-        <div class="column has-text-centered">
-            <h1>Which Type of Animal Do You Want to Explore?</h1>
+<body id="content">
+    <div class="container">
+        <div class="columns">
+            <div class="column has-text-centered">
+                <h1 id="appPrompt">Welcome to Animal Explorer</h1>
+            </div>
         </div>
         <div class="columns is-multiline is-centered" id="appActions">
             <div class="column has-text-centered">
@@ -28,7 +31,6 @@
     <!-- Modal Start -->
     <div class="modal" id="modal">
         <div class="modal-background">
-            
         </div>
         <div class="modal-content">
             <div class="modal-image">
@@ -37,22 +39,23 @@
             </div>
             <div class="modal-body">
                 <div class="columns">
-                  <div class="column">
-                    <h2 id="animalTitle"></h2>
-                    <p id="animalWiki"></p>
-                  </div>
+                    <div class="column">
+                        <h2 id="animalTitle"></h2>
+                        <p id="animalWiki"></p>
+                    </div>
                 </div>
                 <div class="columns">
-                  <div class="column">
-                    <h3>Fun Gifs!</h3>
-                    <div id="animalGiphy"></div>
-                  </div>
+                    <div class="column">
+                        <h3>Fun Gifs!</h3>
+                        <div id="animalGiphy"></div>
+                    </div>v
                 </div>
               </div>            
         </div>
         <button class="modal-close is-large" aria-label="close" id="closeSelection"></button>
     </div>
-  </div>
+    <!-- Modal End -->
+ 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
