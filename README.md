@@ -1,4 +1,4 @@
-# Animal-app 
+# Animal Explorer 
 
 As a group, we must plan and develop an application that utilizes Wikipedia, Giphy, and Pixabay API’s to display animal related articles and images using dynamic html. 
 
