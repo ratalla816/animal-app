@@ -15,7 +15,7 @@ var animalDefaultObj = [
     //Mammals
     {id: 0, klass: 'mammals', name: 'whale', completed: false },
     {id: 1, klass: 'mammals', name: 'zebra', completed: false },
-    {id: 2, klass: 'mammals', name: 'platypus', completed: false },
+    {id: 2, klass: 'mammals', name: 'baboon', completed: false },
     {id: 3, klass: 'mammals', name: 'polar_bear', completed: false },
     {id: 4, klass: 'mammals', name: 'wombat', completed: false },
     //Fish
