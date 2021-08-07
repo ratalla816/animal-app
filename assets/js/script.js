@@ -32,7 +32,7 @@ var animalDefaultObj = [
     {id: 21, klass: 'reptiles', name: 'king_cobra', completed: false },
     {id: 22, klass: 'reptiles', name: 'crocodile', completed: false },
     {id: 23, klass: 'reptiles', name: 'tortoise', completed: false },
-    {id: 24, klass: 'reptiles', name: 'bearded_dragon', completed: false },
+    {id: 24, klass: 'reptiles', name: 'anaconda', completed: false },
 ];
 
 //Get animal object from localStorage
@@ -166,7 +166,7 @@ function getWikiByAnimalName(animal_name) {
 // Sub function called from getAnimalByAnimalName
 // Input animal_name, fetch giphy data, and return html string
 function getGiphyByAnimalName(animal_name) {
-    var fetchData = fetch('https://api.giphy.com/v1/gifs/search?q=' + animal_name + '&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1')
+    var fetchData = fetch('https://api.giphy.com/v1/gifs/search?q=' + animal_name + '&rating=G' + '&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1')
     .then((response) => response.json())
     .then(function(data){
         
