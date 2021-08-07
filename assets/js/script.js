@@ -6,30 +6,30 @@ var animalDefaultObj = [
     //Mammals
     {id: 0, klass: 'mammals', name: 'whale', completed: false },
     {id: 1, klass: 'mammals', name: 'zebra', completed: false },
-    {id: 2, klass: 'mammals', name: 'platypus', completed: false },
+    {id: 2, klass: 'mammals', name: 'baboon', completed: false },
     {id: 3, klass: 'mammals', name: 'polar_bear', completed: false },
     {id: 4, klass: 'mammals', name: 'wombat', completed: false },
     //Fish
     {id: 5, klass: 'fish', name: 'piranha', completed: false },
     {id: 6, klass: 'fish', name: 'whale_shark', completed: false },
     {id: 7, klass: 'fish', name: 'jellyfish', completed: false },
-    {id: 8, klass: 'fish', name: 'blob_fish', completed: false },
+    {id: 8, klass: 'fish', name: 'clownfish', completed: false },
     {id: 9, klass: 'fish', name: 'anglerfish', completed: false },
     //Insects
     {id: 10, klass: 'insects', name: 'ant', completed: false },
-    {id: 11, klass: 'insects', name: 'stick_bug', completed: false },
-    {id: 12, klass: 'insects', name: 'firefly', completed: false },
-    {id: 13, klass: 'insects', name: 'cockroach', completed: false },
+    {id: 11, klass: 'insects', name: 'grasshopper', completed: false },
+    {id: 12, klass: 'insects', name: 'lady_bug', completed: false },
+    {id: 13, klass: 'insects', name: 'roaches', completed: false },
     {id: 14, klass: 'insects', name: 'praying_mantis', completed: false },
     //Birds
     {id: 15, klass: 'birds', name: 'hummingbird', completed: false },
-    {id: 16, klass: 'birds', name: 'golden_eagle', completed: false },
+    {id: 16, klass: 'birds', name: 'eagle', completed: false },
     {id: 17, klass: 'birds', name: 'toucan', completed: false },
     {id: 18, klass: 'birds', name: 'pink_flamingo', completed: false },
     {id: 19, klass: 'birds', name: 'ostrich', completed: false },
     //Reptiles
     {id: 20, klass: 'reptiles', name: 'komodo_dragon', completed: false },
-    {id: 21, klass: 'reptiles', name: 'king_cobra', completed: false },
+    {id: 21, klass: 'reptiles', name: 'rattlesnake', completed: false },
     {id: 22, klass: 'reptiles', name: 'crocodile', completed: false },
     {id: 23, klass: 'reptiles', name: 'tortoise', completed: false },
     {id: 24, klass: 'reptiles', name: 'anaconda', completed: false },
@@ -106,7 +106,7 @@ function renderAnimalOptions(klass) {
         html += '</div>';
     }
 
-    var button = '<div class="column is-full has-text-centered"><button class="backToSelection button is-large">Back To Animal Type</button></div></div>';
+    var button = '<div class="column is-full has-text-centered"><button class="backToSelection button is-large">Back To Animal Types</button></div></div>';
     
     $('#appActions').html(html+button);
 }
@@ -166,7 +166,7 @@ function getWikiByAnimalName(animal_name) {
 // Sub function called from getAnimalByAnimalName
 // Input animal_name, fetch giphy data, and return html string
 function getGiphyByAnimalName(animal_name) {
-    var fetchData = fetch('https://api.giphy.com/v1/gifs/search?q=' + animal_name + '&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1')
+    var fetchData = fetch('https://api.giphy.com/v1/gifs/search?q=' + animal_name + '&rating=G' + '&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1')
     .then((response) => response.json())
     .then(function(data){
         
@@ -214,11 +214,13 @@ function humanize(str) {
     return masterOutput.join(" ");
 }
 
+
 // Event Handling
 
 // When the .startButton is clicked
 $('#appActions').on('click', '.startButton', function() {
     renderAnimalTypeOptions();
+    $(".monkey").addClass("hide-monkey");
 })
 
 //When a .selectionItem is clicked

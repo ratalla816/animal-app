@@ -17,8 +17,6 @@ As a group, we must plan and develop an application that utilizes Wikipedia, Gip
 
 * The user also has the option to view previously searched animals and to start a new search. 
 
-
-
 ## Deployed Application Link
 
 https://ratalla816.github.io/animal-app/
