@@ -106,7 +106,7 @@ function renderAnimalOptions(klass) {
         html += '</div>';
     }
 
-    var button = '<div class="column is-full has-text-centered"><button class="backToSelection button is-large">Back To Animal Type</button></div></div>';
+    var button = '<div class="column is-full has-text-centered"><button class="backToSelection button is-large">Back To Animal Types</button></div></div>';
     
     $('#appActions').html(html+button);
 }
@@ -166,7 +166,7 @@ function getWikiByAnimalName(animal_name) {
 // Sub function called from getAnimalByAnimalName
 // Input animal_name, fetch giphy data, and return html string
 function getGiphyByAnimalName(animal_name) {
-    var fetchData = fetch('https://api.giphy.com/v1/gifs/search?q=' + animal_name + '&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1')
+    var fetchData = fetch('https://api.giphy.com/v1/gifs/search?q=' + animal_name + '&rating=G' + '&api_key=wrXSrUy02o5zN56E5cFhtNzijtmeWcKe&limit=1')
     .then((response) => response.json())
     .then(function(data){
         

@@ -19,9 +19,18 @@ body {
 }
 
 h1{
-    font-size: 36px;
+    font-size: 50px;
     font-weight: 800;
-    margin-bottom: 10%;
+}
+
+/* monkey image */
+.monkey {
+    display: block;
+    width: 30%;
+    height: 300px;
+    margin-top: 22%;
+    margin-left: 46%;
+    margin-right: 54%;
 }
 
 
@@ -31,13 +40,13 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    height: 300px;
     width: 100%;
     overflow: hidden;
     border: none;
 
     border-radius: 25px;
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 800;
     letter-spacing: 2px;
     color: white;
@@ -53,7 +62,15 @@ h1{
 }
 
 /* Buttons Classes */
-.btn {
+
+.backToSelection{
+    border-radius: 15px;
+    border-style: solid;
+    border-color:red;
+    background-color: lightskyblue;
+}
+
+/* .btn {
 
 }
 
@@ -63,7 +80,7 @@ h1{
 
 .btn-secondary {
 
-}
+} */
 
 /* Modal Classes */
 .modal-content {
@@ -146,7 +163,7 @@ h1{
 }
 
 .selectionItem.stick_bug {
-    background-image: url("../images/stick-bug.jpg");
+    background-image: url("../images/stickbug.jpg");
 }
 
 .selectionItem.firefly {
@@ -165,13 +182,13 @@ h1{
     background-image: url("../images/hummingbird.jpg");
 }
 .selectionItem.golden_eagle {
-    background-image: url("../images/golden_eagle.jpg");
+    background-image: url("../images/golden-eagle.jpg");
 }
 .selectionItem.toucan {
     background-image: url("../images/toucan.jpg");
 }
 .selectionItem.pink_flamingo {
-    background-image: url("../images/pink-flamingo.jpg");
+    background-image: url("../images/flamingo.jpg");
 }
 .selectionItem.ostrich {
     background-image: url("../images/ostrich.jpg");
@@ -187,7 +204,7 @@ h1{
     background-image: url("../images/crocodile.jpg");
 }
 .selectionItem.tortoise {
-    background-image: url("../images/tortoise.jpg");
+    background-image: url("../images/galapogos-tortoise.jpg");
 }
 .selectionItem.anaconda {
     background-image: url("../images/anaconda.jpg");
