@@ -183,7 +183,7 @@ function getGiphyByAnimalName(animal_name) {
 function getImageByAnimalName(animal_name) {
     var apiKey = '22691826-3e6bf0771812c9d2424ab24b4';
     var perPage = 200;
-    var fetchData = fetch('https://pixabay.com/api/?key='+ apiKey +'&image_type=photo&order=popular&per_page=' + perPage + '&q=' + animal_name)
+    var fetchData = fetch('https://pixabay.com/api/?key='+ apiKey +'&image_type=photo&order=popular&per_page=' + perPage  + '&q=' + animal_name)
     .then((response) => response.json())
     .then(function(data){
 
