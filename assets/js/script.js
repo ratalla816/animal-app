@@ -13,23 +13,23 @@ var animalDefaultObj = [
     {id: 5, klass: 'fish', name: 'piranha', completed: false },
     {id: 6, klass: 'fish', name: 'whale_shark', completed: false },
     {id: 7, klass: 'fish', name: 'jellyfish', completed: false },
-    {id: 8, klass: 'fish', name: 'blob_fish', completed: false },
+    {id: 8, klass: 'fish', name: 'clownfish', completed: false },
     {id: 9, klass: 'fish', name: 'anglerfish', completed: false },
     //Insects
     {id: 10, klass: 'insects', name: 'ant', completed: false },
-    {id: 11, klass: 'insects', name: 'stick_bug', completed: false },
-    {id: 12, klass: 'insects', name: 'firefly', completed: false },
-    {id: 13, klass: 'insects', name: 'cockroach', completed: false },
+    {id: 11, klass: 'insects', name: 'grasshopper', completed: false },
+    {id: 12, klass: 'insects', name: 'lady_bug', completed: false },
+    {id: 13, klass: 'insects', name: 'roaches', completed: false },
     {id: 14, klass: 'insects', name: 'praying_mantis', completed: false },
     //Birds
     {id: 15, klass: 'birds', name: 'hummingbird', completed: false },
-    {id: 16, klass: 'birds', name: 'golden_eagle', completed: false },
+    {id: 16, klass: 'birds', name: 'eagle', completed: false },
     {id: 17, klass: 'birds', name: 'toucan', completed: false },
     {id: 18, klass: 'birds', name: 'pink_flamingo', completed: false },
     {id: 19, klass: 'birds', name: 'ostrich', completed: false },
     //Reptiles
     {id: 20, klass: 'reptiles', name: 'komodo_dragon', completed: false },
-    {id: 21, klass: 'reptiles', name: 'king_cobra', completed: false },
+    {id: 21, klass: 'reptiles', name: 'rattlesnake', completed: false },
     {id: 22, klass: 'reptiles', name: 'crocodile', completed: false },
     {id: 23, klass: 'reptiles', name: 'tortoise', completed: false },
     {id: 24, klass: 'reptiles', name: 'anaconda', completed: false },
@@ -220,6 +220,7 @@ function humanize(str) {
 // When the .startButton is clicked
 $('#appActions').on('click', '.startButton', function() {
     renderAnimalTypeOptions();
+    $(".monkey").addClass("hide-monkey");
 })
 
 //When a .selectionItem is clicked
