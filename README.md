@@ -17,6 +17,10 @@ As a group, we must plan and develop an application that utilizes Wikipedia, Gip
 
 * The user also has the option to view previously searched animals and to start a new search. 
 
+### Please note
+
+* The pixabay API image for Platypus is displaying the incorrect animal (duck) due to lack of relevent images on their website. 
+
 
 
 ## Deployed Application Link
