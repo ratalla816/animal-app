@@ -8,6 +8,16 @@ h1{
     font-weight: 800;
 }
 
+/* monkey image */
+.monkey {
+    display: block;
+    width: 30%;
+    height: 300px;
+    margin-top: 22%;
+    margin-left: 46%;
+    margin-right: 54%;
+}
+
 
 /* Selection Classes */
 
@@ -39,6 +49,9 @@ h1{
 
 .backToSelection{
     border-radius: 15px;
+    border-style: solid;
+    border-color:red;
+    background-color: lightskyblue;
 }
 
 /* .btn {

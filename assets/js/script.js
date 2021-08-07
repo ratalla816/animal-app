@@ -106,7 +106,7 @@ function renderAnimalOptions(klass) {
         html += '</div>';
     }
 
-    var button = '<div class="column is-full has-text-centered"><button class="backToSelection button is-large">Back To Animal Type</button></div></div>';
+    var button = '<div class="column is-full has-text-centered"><button class="backToSelection button is-large">Back To Animal Types</button></div></div>';
     
     $('#appActions').html(html+button);
 }
