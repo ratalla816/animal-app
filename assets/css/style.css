@@ -1,50 +1,8 @@
 body {
     background-color: khaki;
-    font-family: ui-sans-serif;
-    /* text-shadow: 0px 2px 2px #A4A7A5; */
-    }
-/* 
-img {
-    /* height: 30%;
-    max-width: 30%; */
-    height: auto;
-    max-width: auto;
-    border-radius: 25px;
-} */
-
-/* .selectionWrapper {
-    box is-15-tablet is-20-desktop has-text-centered mt-6
-} */
-/* start addition for jquery */
-/* .classification{
-    display: none;
-} */
-
-/* end of addition for jquery */
-
-/* button:hover{
-    box-shadow: 4px 3px 6px #3b3703;
-  }
-
-.startButton {
-    /* flex-direction: row; */
-    /* justify-content: center/space-around; */
-    padding: 0%;
-    text-align: center;
-    border-radius: 25px;
-    font-weight: bold;
-    text-shadow: 0px 1px 1px #A4A7A5;
-} */
-
-<<<<<<< HEAD
-.selectButton {
-     /* flex-direction: row; */
-    /* justify-content: center/space-around; */
-=======
 /* .selectButton {
     flex-direction: row;
     justify-content: center/space-around;
->>>>>>> 6a702964546e76e0269aebd536d47000f1809f22
     text-align: center;
     padding-right: .25rem;
     padding-left: .25rem;
@@ -56,55 +14,58 @@ img {
     text-shadow: 0px 1px 1px #A4A7A5;    
 }  */
 
-<<<<<<< HEAD
-.selectionBG {
-    padding-left: .25rem;
-    padding-left: .25rem;
-    margin-top: 1rem;
-    margin-bottom: .5rem;
+
+    font-family: Helvetica, sans-serif;
 }
 
-/* .selectionItem {
-    padding-right: .25rem;
-    padding-left: .25rem;
-    flex-direction: row;
-    /* justify-content: center; */
-    /* text-align: center;
-=======
+h1{
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10%;
+}
+
+
 /* Selection Classes */
 
 .selectionItem {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 150px;
     width: 100%;
     overflow: hidden;
     border: none;
->>>>>>> 6a702964546e76e0269aebd536d47000f1809f22
+
     border-radius: 25px;
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 800;
     letter-spacing: 2px;
     color: white;
     background-position: center;
     background-size: cover;
+    cursor: pointer;
 }
 
-.selectionItem > .selectionTitle {
-    display: flex;
-    position: absolute;
-    z-index: 0;
-    font-size: 36px;
-    color: white;
+.selectionItem.completed {
+    opacity: 0.7;
+    cursor: pointer;
+    cursor: auto;
 }
 
-.selectionItem > .selectionImg {
-    display: flex;
-    position: relative;
-    z-index: 5;
+/* Buttons Classes */
+.btn {
+
 }
 
+.btn-primary {
+
+}
+
+.btn-secondary {
+
+}
+
+/* Modal Classes */
 .modal-content {
     background-color: #ffffff;
 }
@@ -176,7 +137,7 @@ img {
     background-image: url("../images/blob-fish.jpg");
 }
 
-.selectionItem.angler_fish {
+.selectionItem.anglerfish {
     background-image: url("../images/angler-fish.jpg");
 }
 
@@ -232,91 +193,7 @@ img {
     background-image: url("../images/anaconda.jpg");
 }
 
-
-
-
-
-
-/* .selectButton {
-    padding: .25rem;
-    flex-direction: row; */
-    /* justify-content: center; */
-    /* text-align: center;
-    border-radius: 25px;
-    font-weight: bold;
-    text-shadow: 0px 1px 1px #A4A7A5;    
-} */
-
-/* .selectionWrapper {
-    display: flex; 
-    flex-direction: row;
-    justify-content: center/space-around;
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-    text-shadow: 0px 1px 1px #A4A7A5;
-} */
-
-/* .animal-classifications {
-    display: flex; 
-    flex-direction: column;
-    justify-content: center/space-around;
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-    text-shadow: 0px 1px 1px #A4A7A5;
-} */
-
-/* image card styling  OPTIONAL */
-/* .image-card {
-background-color: chocolate;
-} */
-
-/* Button classes */
-/* .animalType {
-    display: block;
-    flex-direction: column;
-    justify-content: center/space-around;
-    text-align: center;
-    font-weight: bold;
-    text-shadow: 0px 1px 1px #A4A7A5;
+.selectionItem:hover{
+    transform: scale(1.05);
 }
-} */
-
-/* .animalSelection {
-    display: block;
-    flex-direction: row;
-    justify-content: center/space-around;
-    text-align: center;
-    font-weight: bold;
-    text-shadow: 0px 1px 1px #A4A7A5;
-}
-} */
-
-/* Data Types */
-/* .animalCompleted {
-    display: block;
-    flex-direction: row;
-    justify-content: center/space-around;
-}
-
-@media (max-width: 690px) {
-} */
-
-/* @media (max-width: 690px) {
-    .btn {
-      font-size: 1rem;
-      margin: 16px 0px 0px 0px;
-      padding: 10px 15px;
-    }
-  
-  }
-  
-  @media (max-width: 500px) {
-    .btn {
-      font-size: 0.8rem;
-    }
-  }
-  } */
-
 
