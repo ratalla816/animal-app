@@ -32,7 +32,7 @@ var animalDefaultObj = [
     {id: 21, klass: 'reptiles', name: 'king_cobra', completed: false },
     {id: 22, klass: 'reptiles', name: 'crocodile', completed: false },
     {id: 23, klass: 'reptiles', name: 'tortoise', completed: false },
-    {id: 24, klass: 'reptiles', name: 'anaconda', completed: false },
+    {id: 24, klass: 'reptiles', name: 'bearded_dragon', completed: false },
 ];
 
 //Get animal object from localStorage

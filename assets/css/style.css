@@ -177,8 +177,8 @@ h1{
 .selectionItem.tortoise {
     background-image: url("../images/galapogos-tortoise.jpg");
 }
-.selectionItem.anaconda {
-    background-image: url("../images/anaconda.jpg");
+.selectionItem.bearded_dragon {
+    background-image: url("../images/bearded-dragon.jpg");
 }
 
 .selectionItem:hover{
