@@ -3,16 +3,16 @@ Object & Persistence
 */
 //comment
 //there isn't a data-toggle="tab"
-$(document).ready(function(){
-    $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
-        console.log(e.target);
-        localStorage.setItem('activeTab', $(e.target).attr('href'));
-    });
-    var activeTab = localStorage.getItem('activeTab');
-    if(activeTab){
-        $('#myTab a[href="' + activeTab + '"]').tab('show');
-    }
-});
+// $(document).ready(function(){
+//     $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+//         console.log(e.target);
+//         localStorage.setItem('activeTab', $(e.target).attr('href'));
+//     });
+//     var activeTab = localStorage.getItem('activeTab');
+//     if(activeTab){
+//         $('#myTab a[href="' + activeTab + '"]').tab('show');
+//     }
+// });
 
 var animalDefaultObj = [
     //Mammals
@@ -53,10 +53,16 @@ function getAnimals() {
     return animalObj;
 }
 
+
+
 //Set animal object to localStorage
 function setAnimals(animalObj) {
-    localStorage.setItem('animals', JSON.stringify(animalObj));
+    for (var i=0 ; i<animalDefaultObj.length; i++){
+        console.log(animalDefaultObj[i].completed);
+        localStorage.setItem('animals', JSON.stringify(animalObj));
+    };
 }
+
 
 //App Initializer
 async function animalInit(){
