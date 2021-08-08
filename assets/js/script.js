@@ -2,6 +2,18 @@
 Object & Persistence
 */
 
+//there isn't a data-toggle="tab"
+$(document).ready(function(){
+    $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+        console.log(e.target);
+        localStorage.setItem('activeTab', $(e.target).attr('href'));
+    });
+    var activeTab = localStorage.getItem('activeTab');
+    if(activeTab){
+        $('#myTab a[href="' + activeTab + '"]').tab('show');
+    }
+});
+
 var animalDefaultObj = [
     //Mammals
     {id: 0, klass: 'mammals', name: 'whale', completed: false },
