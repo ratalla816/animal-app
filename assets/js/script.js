@@ -1,6 +1,15 @@
 /*
 Object & Persistence
 */
+$(document).ready(function(){
+    $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+        localStorage.setItem('activeTab', $(e.target).attr('href'));
+    });
+    var activeTab = localStorage.getItem('activeTab');
+    if(activeTab){
+        $('#myTab a[href="' + activeTab + '"]').tab('show');
+    }
+});
 
 var animalDefaultObj = [
     //Mammals
@@ -35,22 +44,16 @@ var animalDefaultObj = [
     {id: 24, klass: 'reptiles', name: 'anaconda', completed: false },
 ];
 
-
-
-
 //Get animal object from localStorage
-function getAnimals(animalObj) {
+function getAnimals() {
     var animalObj = JSON.parse(localStorage.getItem('animals')) || animalDefaultObj;
     return animalObj;
 }
 
-
-
 //Set animal object to localStorage
-function setAnimals(animalObj) { 
+function setAnimals(animalObj) {
     localStorage.setItem('animals', JSON.stringify(animalObj));
-};
-
+}
 
 //App Initializer
 async function animalInit(){
@@ -104,7 +107,6 @@ function renderAnimalOptions(klass) {
 
         if (animalsByType[i].completed) {
             status = " completed"
-            
         }
 
         html += '<div class="column is-one-third">';
@@ -139,7 +141,6 @@ function getAnimalsByType(klass) {
                 return animalData;
             }
     });
-
     return animalsByType ;
 }
 
@@ -270,22 +271,7 @@ $('#closeSelection').on('click', function() {
 
 $('#completeSelection').on('click', function(e) {
     $('.modal').hide();
-
-    // $(this).removeClass('is-warning');
-    // $(this).addClass('is-primary');
-
-    // for (var i=0; i<animalDefaultObj.length; i++){
-    //     if(animalDefaultObj[i].completed == 'true '){
-    //         $(this).removeClass('is-warning');
-    //         $(this).addClass('is-primary');
-    //     }
-    // };
-    // updateCompletedAnimal($(this).attr('data-name'));
-
-  
-    
-    
-    
+    updateCompletedAnimal($(this).attr('data-name'));
 });
 
 
