@@ -1,4 +1,4 @@
-# Animal-app 
+# Animal Explorer 
 
 As a group, we must plan and develop an application that utilizes Wikipedia, Giphy, and Pixabay API’s to display animal related articles and images using dynamic html. 
 
@@ -16,12 +16,6 @@ As a group, we must plan and develop an application that utilizes Wikipedia, Gip
 * When an image is clicked, the user is presented with a Wikipedia article related to that species as well as several images. 
 
 * The user also has the option to view previously searched animals and to start a new search. 
-
-### Please note
-
-* The pixabay API image for Platypus is displaying the incorrect animal (duck) due to lack of relevent images on their website. 
-
-
 
 ## Deployed Application Link
 

@@ -1,24 +1,21 @@
 /*
 Object & Persistence
 */
-//comment
-//there isn't a data-toggle="tab"
-// $(document).ready(function(){
-//     $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
-//         console.log(e.target);
-//         localStorage.setItem('activeTab', $(e.target).attr('href'));
-//     });
-//     var activeTab = localStorage.getItem('activeTab');
-//     if(activeTab){
-//         $('#myTab a[href="' + activeTab + '"]').tab('show');
-//     }
-// });
+$(document).ready(function(){
+    $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+        localStorage.setItem('activeTab', $(e.target).attr('href'));
+    });
+    var activeTab = localStorage.getItem('activeTab');
+    if(activeTab){
+        $('#myTab a[href="' + activeTab + '"]').tab('show');
+    }
+});
 
 var animalDefaultObj = [
     //Mammals
     {id: 0, klass: 'mammals', name: 'whale', completed: false },
     {id: 1, klass: 'mammals', name: 'zebra', completed: false },
-    {id: 2, klass: 'mammals', name: 'platypus', completed: false },
+    {id: 2, klass: 'mammals', name: 'baboon', completed: false },
     {id: 3, klass: 'mammals', name: 'polar_bear', completed: false },
     {id: 4, klass: 'mammals', name: 'wombat', completed: false },
     //Fish
