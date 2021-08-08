@@ -2,7 +2,7 @@
 Object & Persistence
 */
 
-//there isn't a data-toggle="tab", fix
+//there isn't a data-toggle="tab"
 $(document).ready(function(){
     $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
         console.log(e.target);
