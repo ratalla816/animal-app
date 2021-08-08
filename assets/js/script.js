@@ -1,7 +1,7 @@
 /*
 Object & Persistence
 */
-
+//comment
 //there isn't a data-toggle="tab"
 $(document).ready(function(){
     $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
