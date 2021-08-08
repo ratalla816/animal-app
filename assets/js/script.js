@@ -47,8 +47,21 @@ var animalDefaultObj = [
 //Get animal object from localStorage
 function getAnimals() {
     var animalObj = JSON.parse(localStorage.getItem('animals')) || animalDefaultObj;
+
+    for(var i=0; i<animalObj.length; i++){
+        if(animalObj[i].completed){
+            console.log('THIS SPECIFIC ELEMENT IS TRUE/COMPLETED');
+            
+        }
+        else{
+            console.log('NOT CLOMPLETED')
+        }
+    }
     return animalObj;
 }
+
+
+
 
 //Set animal object to localStorage
 function setAnimals(animalObj) {
@@ -272,6 +285,7 @@ $('#closeSelection').on('click', function() {
 $('#completeSelection').on('click', function(e) {
     $('.modal').hide();
     updateCompletedAnimal($(this).attr('data-name'));
+   
 });
 
 
