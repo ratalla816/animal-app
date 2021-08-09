@@ -50,11 +50,11 @@ function getAnimals() {
 
     for(var i=0; i<animalObj.length; i++){
         if(animalObj[i].completed){
-            console.log('THIS SPECIFIC ELEMENT IS TRUE/COMPLETED');
+            // console.log('THIS SPECIFIC ELEMENT IS TRUE/COMPLETED');
             
         }
         else{
-            console.log('NOT COMPLETED')
+            // console.log('NOT COMPLETED')
         }
     }
     return animalObj;
@@ -119,6 +119,7 @@ function renderAnimalOptions(klass) {
         var status = "";
 
         if (animalsByType[i].completed) {
+            
             status = " completed"
         }
 
@@ -147,14 +148,14 @@ function renderAnimalOptions(klass) {
         $('#animalGiphy').html(animal.giphy);
         $('#animalImg').attr('src', animal.image);
         $('#completeSelection').attr('data-name', animalName);
-        
+        // $('#completeSelection').addClass("is-completed");
         $('.modal').show();
     }
 
-    if (animal.completed) {
-        $('#completeSelection').addClass("is-completed")
+    if (animalName.completed) {
+        $('#completeSelection').addClass("is-completed");
 
-            return is-completed;
+            // return completeSelection;
         
     }
 }
