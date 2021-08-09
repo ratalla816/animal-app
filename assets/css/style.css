@@ -41,6 +41,21 @@ h1{
     display: none;
 }
 
+/* monkey image */
+.monkey {
+    display: block;
+    width: 30%;
+    height: 300px;
+    margin-top: 22%;
+    margin-left: 46%;
+    margin-right: 54%;
+    position:relative;
+}
+
+.hide-monkey {
+    display: none;
+}
+
 /* Selection Classes */
 
 .selectionItem {
@@ -66,6 +81,10 @@ h1{
     opacity: 0.7;
     cursor: pointer;
     cursor: auto;
+}
+
+.completed {
+    background-color: orangered;
 }
 
 /* Buttons Classes */

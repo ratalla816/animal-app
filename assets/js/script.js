@@ -54,7 +54,7 @@ function getAnimals() {
             
         }
         else{
-            console.log('NOT CLOMPLETED')
+            console.log('NOT COMPLETED')
         }
     }
     return animalObj;
