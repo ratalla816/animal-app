@@ -83,7 +83,7 @@ h1{
     cursor: auto;
 }
 
-.completed {
+.is-completed {
     background-color: orangered;
 }
 

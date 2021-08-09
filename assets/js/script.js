@@ -147,8 +147,15 @@ function renderAnimalOptions(klass) {
         $('#animalGiphy').html(animal.giphy);
         $('#animalImg').attr('src', animal.image);
         $('#completeSelection').attr('data-name', animalName);
-
+        
         $('.modal').show();
+    }
+
+    if (animal.completed) {
+        $('#completeSelection').html(HTMLButtonElement)
+
+            return is-completed;
+        
     }
 }
 
@@ -160,6 +167,7 @@ function getAnimalsByType(klass) {
             }
     });
     return animalsByType ;
+    
 }
 
 // Get separate api data and create single animal object
@@ -293,7 +301,7 @@ $('#completeSelection').on('click', function(e) {
    
 });
 
-
+animalInit();
 /* 
 Basic Wikipedia API Notes
 Base URL: 'http://en.wikipedia.org/w/api.php?'
@@ -372,5 +380,5 @@ Format: '&format=json'
 //     });
 // }
 
-animalInit();
+
 
