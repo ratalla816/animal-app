@@ -150,7 +150,7 @@ function renderAnimalOptions(klass) {
         
         $('.modal').show();
     }
-
+    
     if (animal.completed) {
         $('#completeSelection').html(HTMLButtonElement)
 
@@ -379,6 +379,3 @@ Format: '&format=json'
 //         console.log("Pixabay Query Response", data);
 //     });
 // }
-
-
-
