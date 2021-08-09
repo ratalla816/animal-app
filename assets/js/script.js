@@ -152,7 +152,7 @@ function renderAnimalOptions(klass) {
     }
 
     if (animal.completed) {
-        $('#completeSelection').html(HTMLButtonElement)
+        $('#completeSelection').addClass("is-completed")
 
             return is-completed;
         
