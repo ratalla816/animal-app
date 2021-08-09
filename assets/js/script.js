@@ -86,9 +86,7 @@ function updateCompletedAnimal(animalName) {
     for (var i = 0; i< animals.length; i++){
         if (animals[i].name == animalName) {
             animals[i].completed = true;
-            if (animals[i].completed){
-                // $('#completeSelection').attr('data-id',animalName);
-              
+            if (animals[i].completed){              
                 
                 $('#completeSelection').removeClass('is-warning');
                 $('#completeSelection').addClass("is-completed");
