@@ -132,8 +132,12 @@ function renderAnimalOptions(klass) {
     
     $('#appActions').html(html+button);
 }
+// Step 1: It makes sense that we would want to create some logic that piggy backs off this idea and adds a class to the “#completeSelection” element that says 
+// “is-completed” or “completed.” Part of the object returned from “getAnimalByAnimalName” is a “completed” property. 
+// Within renderAnimalModel, test for animal.completed and you can add a special css class to the “#completeSelection” to denote its status.
+// 	Step 2: Within CSS, create a class for “.is-completed” or “.completed” and specify the color or styling changes there.
 
-async function renderAnimalModal(animalName) {
+    async function renderAnimalModal(animalName) {
     var animal = await getAnimalByAnimalName(animalName);
 
     if (animal) {
