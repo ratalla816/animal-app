@@ -132,6 +132,7 @@ function renderAnimalOptions(klass) {
     
     $('#appActions').html(html+button);
 }
+
 // Step 1: It makes sense that we would want to create some logic that piggy backs off this idea and adds a class to the “#completeSelection” element that says 
 // “is-completed” or “completed.” Part of the object returned from “getAnimalByAnimalName” is a “completed” property. 
 // Within renderAnimalModel, test for animal.completed and you can add a special css class to the “#completeSelection” to denote its status.
