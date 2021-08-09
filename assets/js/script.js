@@ -1,15 +1,6 @@
 /*
 Object & Persistence
 */
-$(document).ready(function(){
-    $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
-        localStorage.setItem('activeTab', $(e.target).attr('href'));
-    });
-    var activeTab = localStorage.getItem('activeTab');
-    if(activeTab){
-        $('#myTab a[href="' + activeTab + '"]').tab('show');
-    }
-});
 
 var animalDefaultObj = [
     //Mammals
@@ -125,9 +116,8 @@ function renderAnimalOptions(klass) {
         var status = "";
 
         if (animalsByType[i].completed) {
+            
             status = " completed"
-            console.log(typeof status);
-            $('#completeSelection').addClass("is-completed")
         }
 
         html += '<div class="column is-one-third">';
@@ -157,10 +147,10 @@ function renderAnimalOptions(klass) {
         $('#animalGiphy').html(animal.giphy);
         $('#animalImg').attr('src', animal.image);
         $('#completeSelection').attr('data-name', animalName);
-        
+        // $('#completeSelection').addClass("is-completed");
         $('.modal').show();
     }
-    
+
 }
 
 function getAnimalsByType(klass) {
