@@ -48,15 +48,16 @@ var animalDefaultObj = [
 function getAnimals() {
     var animalObj = JSON.parse(localStorage.getItem('animals')) || animalDefaultObj;
 
-    for(var i=0; i<animalObj.length; i++){
-        if(animalObj[i].completed){
-            console.log('THIS SPECIFIC ELEMENT IS TRUE/COMPLETED');
+    // for(var i=0; i<animalObj.length; i++){
+    //     if(animalObj[i].completed){
+    //         $('#completeSelection').removeClass('is-warning');
+    //         $('#completeSelection').addClass("is-completed");
             
-        }
-        else{
-            console.log('NOT COMPLETED')
-        }
-    }
+    //     }
+    //     else{
+    //         //console.log('NOT COMPLETED')
+    //     }
+    // }
     return animalObj;
 }
 
@@ -85,11 +86,19 @@ function updateCompletedAnimal(animalName) {
     for (var i = 0; i< animals.length; i++){
         if (animals[i].name == animalName) {
             animals[i].completed = true;
+            if (animals[i].completed){
+                // $('#completeSelection').attr('data-id',animalName);
+              
+                
+                $('#completeSelection').removeClass('is-warning');
+                $('#completeSelection').addClass("is-completed");
+            }
         }
     }
 
     setAnimals(animals);
 }
+
 
 
 // Renders layout to select animal types
@@ -114,12 +123,13 @@ function renderAnimalTypeOptions() {
 function renderAnimalOptions(klass) {
     var html = "";
     var animalsByType = getAnimalsByType(klass);
-
     for (var i = 0; i < animalsByType.length; i++){
         var status = "";
 
         if (animalsByType[i].completed) {
             status = " completed"
+            console.log(typeof status);
+            $('#completeSelection').addClass("is-completed")
         }
 
         html += '<div class="column is-one-third">';
@@ -139,8 +149,10 @@ function renderAnimalOptions(klass) {
 // 	Step 2: Within CSS, create a class for “.is-completed” or “.completed” and specify the color or styling changes there.
 
     async function renderAnimalModal(animalName) {
+
     var animal = await getAnimalByAnimalName(animalName);
 
+    
     if (animal) {
         $('#animalTitle').html(humanize(animalName));
         $('#animalWiki').html(animal.wiki);
@@ -151,12 +163,6 @@ function renderAnimalOptions(klass) {
         $('.modal').show();
     }
     
-    if (animal.completed) {
-        $('#completeSelection').addClass("is-completed")
-
-            return is-completed;
-        
-    }
 }
 
 function getAnimalsByType(klass) {

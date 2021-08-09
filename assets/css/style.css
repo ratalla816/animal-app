@@ -1,6 +1,4 @@
-.test{
-    background-color: purple;
-}
+
 body {
     background-color: khaki;
 /* .selectButton {
@@ -84,7 +82,7 @@ h1{
 }
 
 .is-completed {
-    background-color: orangered;
+    background-color: green;
 }
 
 /* Buttons Classes */
