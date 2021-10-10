@@ -36,8 +36,8 @@
 
 
   ## Screenshot
-  ![application screenshot](./assets/images/animal-app-screenshot.JPG)
-
+  ![application screenshot](./assets/images/animal-app-vid.GIF)
+ 
   ## Features
   Utilizes Wikipedia, Giphy, and Pixabay API’s to display animal related articles and images using dynamic html.
   
