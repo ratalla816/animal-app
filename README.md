@@ -20,7 +20,7 @@
   ## Table of Contents
   - [Description](#description)
   - [Usage](#usage)
-  - [Screenshot](#screenshot)
+  - [Preview](#preview)
   - [Features](#features)
   - [Acknowledgements](#acknowledgements)
   - [License](#license)
@@ -35,7 +35,7 @@
   When I click on an image, I am presented with a Wikipedia article related to that species as well as several images. I also have the option to view previously searched animals and to start a new search 
 
 
-  ## Screenshot
+  ## Preview
   ![application screenshot](./assets/images/animal-app-vid.gif)
  
   ## Features
