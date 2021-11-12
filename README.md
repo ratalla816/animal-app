@@ -19,6 +19,7 @@
  
   ## Table of Contents
   - [Description](#description)
+  - [Deployment](#deployment)
   - [Usage](#usage)
   - [Screenshot](#screenshot)
   - [Features](#features)
@@ -26,6 +27,9 @@
   - [License](#license)
   - [Contact](#contact)
 
+  ## Deployment
+
+  This application is deployed using GitHub Pages <https://ratalla816.github.io/animal-app/>
   ## Usage
   User Story:
 
