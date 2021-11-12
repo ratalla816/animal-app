@@ -50,8 +50,22 @@ var animalDefaultObj = [
 //Get animal object from localStorage
 function getAnimals() {
     var animalObj = JSON.parse(localStorage.getItem('animals')) || animalDefaultObj;
+
+    // for(var i=0; i<animalObj.length; i++){
+    //     if(animalObj[i].completed){
+    //         $('#completeSelection').removeClass('is-warning');
+    //         $('#completeSelection').addClass("is-completed");
+            
+    //     }
+    //     else{
+    //         //console.log('NOT COMPLETED')
+    //     }
+    // }
     return animalObj;
 }
+
+
+
 
 //Set animal object to localStorage
 function setAnimals(animalObj) {
@@ -75,11 +89,17 @@ function updateCompletedAnimal(animalName) {
     for (var i = 0; i< animals.length; i++){
         if (animals[i].name == animalName) {
             animals[i].completed = true;
+            if (animals[i].completed){              
+                
+                $('#completeSelection').removeClass('is-warning');
+                $('#completeSelection').addClass("is-completed");
+            }
         }
     }
 
     setAnimals(animals);
 }
+
 
 
 // Renders layout to select animal types
@@ -104,11 +124,11 @@ function renderAnimalTypeOptions() {
 function renderAnimalOptions(klass) {
     var html = "";
     var animalsByType = getAnimalsByType(klass);
-
     for (var i = 0; i < animalsByType.length; i++){
         var status = "";
 
         if (animalsByType[i].completed) {
+            
             status = " completed"
         }
 
@@ -123,18 +143,26 @@ function renderAnimalOptions(klass) {
     $('#appActions').html(html+button);
 }
 
-async function renderAnimalModal(animalName) {
+// Step 1: It makes sense that we would want to create some logic that piggy backs off this idea and adds a class to the “#completeSelection” element that says 
+// “is-completed” or “completed.” Part of the object returned from “getAnimalByAnimalName” is a “completed” property. 
+// Within renderAnimalModel, test for animal.completed and you can add a special css class to the “#completeSelection” to denote its status.
+// 	Step 2: Within CSS, create a class for “.is-completed” or “.completed” and specify the color or styling changes there.
+
+    async function renderAnimalModal(animalName) {
+
     var animal = await getAnimalByAnimalName(animalName);
 
+    
     if (animal) {
         $('#animalTitle').html(humanize(animalName));
         $('#animalWiki').html(animal.wiki);
         $('#animalGiphy').html(animal.giphy);
         $('#animalImg').attr('src', animal.image);
         $('#completeSelection').attr('data-name', animalName);
-
+        // $('#completeSelection').addClass("is-completed");
         $('.modal').show();
     }
+
 }
 
 function getAnimalsByType(klass) {
@@ -145,6 +173,7 @@ function getAnimalsByType(klass) {
             }
     });
     return animalsByType ;
+    
 }
 
 // Get separate api data and create single animal object
@@ -275,9 +304,10 @@ $('#closeSelection').on('click', function() {
 $('#completeSelection').on('click', function(e) {
     $('.modal').hide();
     updateCompletedAnimal($(this).attr('data-name'));
+   
 });
 
-
+animalInit();
 /* 
 Basic Wikipedia API Notes
 Base URL: 'http://en.wikipedia.org/w/api.php?'
@@ -355,6 +385,3 @@ Format: '&format=json'
 //         console.log("Pixabay Query Response", data);
 //     });
 // }
-
-animalInit();
-
