@@ -19,25 +19,17 @@
  
   ## Table of Contents
   - [Description](#description)
-<<<<<<< HEAD
-  - [Usage](#usage)
-  - [Preview](#preview)
-=======
   - [Deployment](#deployment)
   - [Usage](#usage)
   - [Screenshot](#screenshot)
->>>>>>> develop
   - [Features](#features)
   - [Acknowledgements](#acknowledgements)
   - [License](#license)
   - [Contact](#contact)
 
-<<<<<<< HEAD
-=======
   ## Deployment
 
   This application is deployed using GitHub Pages <https://ratalla816.github.io/animal-app/>
->>>>>>> develop
   ## Usage
   User Story:
 
@@ -47,15 +39,12 @@
   When I click on an image, I am presented with a Wikipedia article related to that species as well as several images. I also have the option to view previously searched animals and to start a new search 
 
 
-<<<<<<< HEAD
   ## Preview
   ![application screenshot](./assets/images/animal-app-vid.gif)
  
-=======
   ## Screenshot
   ![application screenshot](./assets/images/animal-app-screenshot.JPG)
 
->>>>>>> develop
   ## Features
   Utilizes Wikipedia, Giphy, and Pixabay API’s to display animal related articles and images using dynamic html.
   
